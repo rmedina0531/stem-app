@@ -1,0 +1,22 @@
+#new branch
+git branch [branch name]
+git checkout -b [branch name]
+
+#checkout branch
+git checkout [branch name]
+
+#check for new changes on remote repo (github)
+git fetch
+
+#pull changes from remote remp to current branch
+git pull origin [branchname]
+
+#push branch to remote repo
+git push origin [branchname]
+
+git status
+git add 
+git commit -m 'message'
+
+#merge into current branch
+git merge [branchname]
