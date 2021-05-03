@@ -1,11 +1,12 @@
 import React from "react";
 
 import { StyleSheet, View, Text } from "react-native";
+import TopicPage from "../components/TopicPage";
 
 const Engineering = () => {
   return (
     <View>
-      <Text>Engineering Page</Text>
+      <TopicPage title="Engineering" textColor="#E54C4C" />
     </View>
   );
 };

@@ -1,5 +1,5 @@
 import React from "react";
-import { Text, View } from "react-native";
+import { StyleSheet, Text, View } from "react-native";
 
 // import custom components
 import Button from "../components/Button";
@@ -11,23 +11,38 @@ const Home = (props) => {
   const engineeringHandler = () => navigation.navigate("Engineering");
   const mathHandler = () => navigation.navigate("Math");
   return (
-    <View>
-      <Text>My STEM APP</Text>
-      <Button text="Science" onPress={scienceHandler} />
-      <Button text="Technology" onPress={technologyHandler} />
-      <Button text="Engineering" onPress={engineeringHandler} />
-      <Button text="Math" onPress={mathHandler} />
+    <View style={styles.container}>
+      <Text style={styles.title}>STEM-VERSE</Text>
+      <View style={styles.buttonContainer}>
+        <Button text="Science" onPress={scienceHandler} color="#5EAC79" />
+        <Button text="Technology" onPress={technologyHandler} color="#80BFBB" />
+        <Button
+          text="Engineering"
+          onPress={engineeringHandler}
+          color="#E54C4C"
+        />
+        <Button text="Math" onPress={mathHandler} color="#E99A46" />
+      </View>
     </View>
   );
 };
 
-// const styles = StyleSheet.create({
-//   container: {
-//     flex: 1,
-//     backgroundColor: "#fff",
-//     alignItems: "center",
-//     justifyContent: "center",
-//   },
-// });
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: "#1C1C1C",
+    alignItems: "center",
+    justifyContent: "center",
+  },
+  buttonContainer: {
+    display: "flex",
+    flexDirection: "column",
+    justifyContent: "center",
+  },
+  title: {
+    fontSize: 40,
+    color: "#FFFFFF",
+  },
+});
 
 export default Home;

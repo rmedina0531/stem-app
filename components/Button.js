@@ -3,29 +3,41 @@ import { StyleSheet, Text } from "react-native";
 import { TouchableOpacity } from "react-native-gesture-handler";
 
 const Button = (props) => {
+  // console.log(props.color);
   return (
-    <TouchableOpacity style={styles.button} onPress={props.onPress}>
-      <Text>{props.text}</Text>
+    <TouchableOpacity
+      style={
+        props.style
+          ? props.style
+          : [styles.button, { backgroundColor: props.color }]
+      }
+      onPress={props.onPress}
+    >
+      <Text
+        style={
+          props.textColor
+            ? [styles.text, { color: props.textColor }]
+            : styles.text
+        }
+      >
+        {props.text}
+      </Text>
     </TouchableOpacity>
   );
 };
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: "center",
-    paddingHorizontal: 10,
-  },
   button: {
     alignItems: "center",
     backgroundColor: "#DDDDDD",
     padding: 10,
-    borderColor: "#ffffff",
-    borderWidth: 2,
+    width: 200,
+    borderRadius: 30,
+    margin: 10,
   },
-  countContainer: {
-    alignItems: "center",
-    padding: 10,
+  text: {
+    color: "#ffffff",
+    fontSize: 20,
   },
 });
 

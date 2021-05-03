@@ -1,11 +1,12 @@
 import React from "react";
 
 import { StyleSheet, View, Text } from "react-native";
+import TopicPage from "../components/TopicPage";
 
 const MathPage = () => {
   return (
     <View>
-      <Text>Math Page</Text>
+      <TopicPage title="Math" textColor="#E99A46" />
     </View>
   );
 };
