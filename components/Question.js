@@ -1,22 +1,31 @@
 import React, { useState } from "react";
-import { StyleSheet, View, Text, Modal } from "react-native";
+
+import { Text, View, StyleSheet } from "react-native";
 import Button from "./Button";
 
-import Quiz from "../components/Quiz";
+const Question = (props) => {
+  const [currentQuestion, setCurrentQuestion] = useState(0);
+  const { type, question, a, b, c, d, answer } = props.json[currentQuestion];
+  const [selected, setSelected] = useState(null);
+  const nextHandler = () => {
+    setCurrentQuestion(currentQuestion + 1);
+  };
+  const selectedA = () => {
+    setSelected("a");
+  };
+  const selectedB = () => {
+    setSelected("a");
+  };
+  const selectedC = () => {
+    setSelected("a");
+  };
+  const selectedD = () => {
+    setSelected("a");
+  };
 
-const TopicPage = (props) => {
-  const [quizOpen, setQuizOpen] = useState(false);
-  const closeQuizHandler = () => setQuizOpen(false);
   return (
-    <View style={{ backgroundColor: props.textColor }}>
-      {/* quiz modal */}
-      <Modal visible={quizOpen} animationType="slide">
-        <Quiz title={props.title} exitHandler={closeQuizHandler} />
-      </Modal>
-
-      <Text style={[styles.title, { color: props.textColor }]}>
-        {props.title}
-      </Text>
+    <View>
+      <Text style={styles.title}>{props.title + "Quiz stuff goes here"}</Text>
       <View
         style={{
           display: "flex",
@@ -32,14 +41,16 @@ const TopicPage = (props) => {
           }}
         >
           <Button
-            text={props.title + " Topics"}
+            text={"A"}
             style={styles.buttonStyle}
             textColor={props.textColor}
+            onPress={props.selectedA}
           />
           <Button
-            text="Stories"
+            text="B"
             style={styles.buttonStyle}
             textColor={props.textColor}
+            onPress={props.selectedB}
           />
         </View>
         <View
@@ -50,23 +61,29 @@ const TopicPage = (props) => {
           }}
         >
           <Button
-            text="When I grow up!"
+            text="C"
             style={styles.buttonStyle}
             textColor={props.textColor}
+            onPress={props.selectedC}
           />
           <Button
-            text="Quiz Me!"
+            text="D"
             style={styles.buttonStyle}
             textColor={props.textColor}
-            onPress={() => setQuizOpen(true)}
+            onPress={props.selectedD}
           />
         </View>
       </View>
+      <Button
+        text="Close Quiz"
+        onPress={props.exitHandler}
+        color="#DDDDDD"
+      ></Button>
     </View>
   );
 };
 
-export default TopicPage;
+export default Question;
 
 const styles = StyleSheet.create({
   buttonContainer: {
@@ -82,7 +99,7 @@ const styles = StyleSheet.create({
     textShadowRadius: 10,
   },
   buttonStyle: {
-    backgroundColor: "#FFFFFF",
+    backgroundColor: "#555555",
     height: 150,
     width: 175,
     margin: 10,

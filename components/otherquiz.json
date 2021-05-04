@@ -1,0 +1,82 @@
+{
+  "Science": [
+    {
+      "type": "text",
+      "question": "What is 2+2?",
+      "a": "1",
+      "b": "2",
+      "c": "3",
+      "d": "4",
+      "answer": "d"
+    },
+    {
+      "type": "text",
+      "question": "How many protons in hydrogen?",
+      "a": "1",
+      "b": "2",
+      "c": "3",
+      "d": "4",
+      "answer": "a"
+    }
+  ],
+  "Technology": [
+    {
+      "type": "text",
+      "question": "What is 2+2?",
+      "a": "1",
+      "b": "2",
+      "c": "3",
+      "d": "4",
+      "answer": "d"
+    },
+    {
+      "type": "text",
+      "question": "How many protons in hydrogen?",
+      "a": "1",
+      "b": "2",
+      "c": "3",
+      "d": "4",
+      "answer": "a"
+    }
+  ],
+  "Engineering": [
+    {
+      "type": "text",
+      "question": "What is 2+2?",
+      "a": "1",
+      "b": "2",
+      "c": "3",
+      "d": "4",
+      "answer": "d"
+    },
+    {
+      "type": "text",
+      "question": "How many protons in hydrogen?",
+      "a": "1",
+      "b": "2",
+      "c": "3",
+      "d": "4",
+      "answer": "a"
+    }
+  ],
+  "Math": [
+    {
+      "type": "text",
+      "question": "What is 2+2?",
+      "a": "1",
+      "b": "2",
+      "c": "3",
+      "d": "4",
+      "answer": "d"
+    },
+    {
+      "type": "text",
+      "question": "How many protons in hydrogen?",
+      "a": "1",
+      "b": "2",
+      "c": "3",
+      "d": "4",
+      "answer": "a"
+    }
+  ]
+}
