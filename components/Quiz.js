@@ -12,7 +12,7 @@ import Question from "./Question";
 
 // import quiz from "./otherquiz.json";
 const Quiz = (props) => {
-  const datajson = require("./otherquiz.json");
+  const datajson = require("../data/quiz.json");
   const questions = datajson[props.title];
 
   const [score, setScore] = useState(0);

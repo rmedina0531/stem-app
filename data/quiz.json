@@ -77,6 +77,24 @@
       "c": "3",
       "d": "4",
       "answer": "a"
+    },
+    {
+      "type": "text",
+      "question": "What do the interiar angles of a Triangle add up to?",
+      "a": "90",
+      "b": "180",
+      "c": "270",
+      "d": "360",
+      "answer": "b"
+    },
+    {
+      "type": "text",
+      "question": "3x3=?",
+      "a": "5",
+      "b": "7",
+      "c": "9",
+      "d": "11",
+      "answer": "c"
     }
   ]
 }

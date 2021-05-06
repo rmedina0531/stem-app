@@ -25,6 +25,7 @@ const Question = (props) => {
       console.log("flag trigger");
       setResultFlag(true);
     }
+    setSelected(null);
   };
   const selectedA = () => {
     setSelected("a");
@@ -107,12 +108,12 @@ const Question = (props) => {
             />
           </View>
         </View>
+        <Button text="Next" onPress={nextHandler} color="#AAAAAA"></Button>
         <Button
           text="Close Quiz"
           onPress={props.closeHandler}
           color="#DDDDDD"
         ></Button>
-        <Button text="Next" onPress={nextHandler} color="#AAAAAA"></Button>
       </View>
     );
   }
