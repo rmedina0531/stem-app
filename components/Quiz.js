@@ -15,14 +15,12 @@ const Quiz = (props) => {
   const datajson = require("./otherquiz.json");
   const questions = datajson[props.title];
 
-  console.log(questions);
-
   const [score, setScore] = useState(0);
   const [prevScore, setPrevScore] = useState(0);
 
   const [questionOpen, setQuestionOpen] = useState(false);
 
-  const startQuizHandler = () => {};
+  //   const startQuizHandler = () => {};
   return (
     <View>
       {/* display questions */}
@@ -35,7 +33,11 @@ const Quiz = (props) => {
       </Modal>
       <Text style={styles.title}>Quiz Title</Text>
       <Text style={styles.title}>Previous Score</Text>
-      <Button text="Start Quiz" color="#AAAAAA" />
+      <Button
+        text="Start Quiz"
+        onPress={() => setQuestionOpen(true)}
+        color="#AAAAAA"
+      />
       <Button text="Exit" onPress={props.exitHandler} color="#AAAAAA" />
     </View>
   );

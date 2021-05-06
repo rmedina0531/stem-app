@@ -4,83 +4,118 @@ import { Text, View, StyleSheet } from "react-native";
 import Button from "./Button";
 
 const Question = (props) => {
-  const [currentQuestion, setCurrentQuestion] = useState(0);
-  const { type, question, a, b, c, d, answer } = props.json[currentQuestion];
+  const questionList = props.json;
+  let [currentQuestion, setCurrentQuestion] = useState(0);
+  let [resultFlag, setResultFlag] = useState(false);
+  let [score, setScore] = useState(0);
+  let { type, question, a, b, c, d, answer } = questionList[currentQuestion];
   const [selected, setSelected] = useState(null);
+
   const nextHandler = () => {
-    setCurrentQuestion(currentQuestion + 1);
+    // check if question was correct and update score
+    if (selected === answer) {
+      setScore(score + 1);
+    }
+    // change to next question
+    if (currentQuestion + 1 < questionList.length) {
+      currentQuestion = currentQuestion + 1;
+      setCurrentQuestion(currentQuestion);
+      console.log(currentQuestion);
+    } else {
+      console.log("flag trigger");
+      setResultFlag(true);
+    }
   };
   const selectedA = () => {
     setSelected("a");
   };
   const selectedB = () => {
-    setSelected("a");
+    setSelected("b");
   };
   const selectedC = () => {
-    setSelected("a");
+    setSelected("c");
   };
   const selectedD = () => {
-    setSelected("a");
+    setSelected("d");
   };
 
-  return (
-    <View>
-      <Text style={styles.title}>{props.title + "Quiz stuff goes here"}</Text>
-      <View
-        style={{
-          display: "flex",
-          flexDirection: "column",
-          justifyContent: "center",
-        }}
-      >
-        <View
-          style={{
-            display: "flex",
-            flexDirection: "row",
-            justifyContent: "center",
-          }}
-        >
-          <Button
-            text={"A"}
-            style={styles.buttonStyle}
-            textColor={props.textColor}
-            onPress={props.selectedA}
-          />
-          <Button
-            text="B"
-            style={styles.buttonStyle}
-            textColor={props.textColor}
-            onPress={props.selectedB}
-          />
-        </View>
-        <View
-          style={{
-            display: "flex",
-            flexDirection: "row",
-            justifyContent: "center",
-          }}
-        >
-          <Button
-            text="C"
-            style={styles.buttonStyle}
-            textColor={props.textColor}
-            onPress={props.selectedC}
-          />
-          <Button
-            text="D"
-            style={styles.buttonStyle}
-            textColor={props.textColor}
-            onPress={props.selectedD}
-          />
-        </View>
+  if (resultFlag) {
+    return (
+      <View>
+        <Text>Results</Text>
+        <Text>Score: {score}</Text>
+        <Button text="return" onPress={props.closeHandler} color="#AAAAAA" />
       </View>
-      <Button
-        text="Close Quiz"
-        onPress={props.exitHandler}
-        color="#DDDDDD"
-      ></Button>
-    </View>
-  );
+    );
+  } else {
+    return (
+      <View>
+        <Text style={styles.title}>{question}</Text>
+        <View
+          style={{
+            display: "flex",
+            flexDirection: "column",
+            justifyContent: "center",
+          }}
+        >
+          <View
+            style={{
+              display: "flex",
+              flexDirection: "row",
+              justifyContent: "center",
+            }}
+          >
+            <Button
+              text={a}
+              style={
+                selected === "a" ? styles.activeButtonStyle : styles.buttonStyle
+              }
+              textColor={props.textColor}
+              onPress={selectedA}
+            />
+            <Button
+              text={b}
+              style={
+                selected === "b" ? styles.activeButtonStyle : styles.buttonStyle
+              }
+              textColor={props.textColor}
+              onPress={selectedB}
+            />
+          </View>
+          <View
+            style={{
+              display: "flex",
+              flexDirection: "row",
+              justifyContent: "center",
+            }}
+          >
+            <Button
+              text={c}
+              style={
+                selected === "c" ? styles.activeButtonStyle : styles.buttonStyle
+              }
+              textColor={props.textColor}
+              onPress={selectedC}
+            />
+            <Button
+              text={d}
+              style={
+                selected === "d" ? styles.activeButtonStyle : styles.buttonStyle
+              }
+              textColor={props.textColor}
+              onPress={selectedD}
+            />
+          </View>
+        </View>
+        <Button
+          text="Close Quiz"
+          onPress={props.closeHandler}
+          color="#DDDDDD"
+        ></Button>
+        <Button text="Next" onPress={nextHandler} color="#AAAAAA"></Button>
+      </View>
+    );
+  }
 };
 
 export default Question;
@@ -106,5 +141,16 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     alignItems: "center",
     borderRadius: 20,
+  },
+  activeButtonStyle: {
+    backgroundColor: "#555555",
+    height: 150,
+    width: 175,
+    margin: 10,
+    justifyContent: "center",
+    alignItems: "center",
+    borderRadius: 20,
+    borderWidth: 5,
+    borderColor: "#00FF00",
   },
 });
