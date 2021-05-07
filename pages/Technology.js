@@ -3,10 +3,15 @@ import React from "react";
 import { StyleSheet, View, Text } from "react-native";
 import TopicPage from "../components/TopicPage";
 
-const Technology = () => {
+const Technology = (props) => {
+  const { navigation } = props;
   return (
     <View>
-      <TopicPage title="Technology" textColor="#80BFBB" backgroundImage="" />
+      <TopicPage
+        title="Technology"
+        textColor="#80BFBB"
+        navigation={navigation}
+      />
     </View>
   );
 };

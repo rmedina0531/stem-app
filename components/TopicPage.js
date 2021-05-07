@@ -5,8 +5,30 @@ import Button from "./Button";
 import Quiz from "../components/Quiz";
 
 const TopicPage = (props) => {
+  const { navigation } = props;
   const [quizOpen, setQuizOpen] = useState(false);
   const closeQuizHandler = () => setQuizOpen(false);
+
+  async function storiesHandler() {
+    let key = "?apiKey=7ff285bdf33b42a083f63887f5b59503";
+    let url = "https://newsapi.org/v2/everything" + key;
+    // search parameter
+    let search = "&q=" + "Apple";
+    let sortby = "&sortBy=" + "popularity";
+
+    fetch(url + search + sortby)
+      .then((data) => {
+        return data.json();
+      })
+      .then((res) => {
+        console.log(res);
+      })
+      .catch((error) => console.log(error));
+    // const result_data = await res.json;
+    // console.log(res);
+    // navigation.navigate("Stories");
+  }
+
   return (
     <View style={{ backgroundColor: props.textColor }}>
       {/* quiz modal */}
@@ -40,6 +62,7 @@ const TopicPage = (props) => {
             text="Stories"
             style={styles.buttonStyle}
             textColor={props.textColor}
+            onPress={storiesHandler}
           />
         </View>
         <View
