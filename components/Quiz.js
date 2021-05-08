@@ -31,7 +31,6 @@ const Quiz = (props) => {
         />
       </Modal>
       <Text style={styles.title}>{props.title} Quiz</Text>
-      <Text style={styles.title}>Best Score: {prevScore}</Text>
       <Button
         text="Start Quiz"
         onPress={() => setQuestionOpen(true)}

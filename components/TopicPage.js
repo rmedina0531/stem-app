@@ -32,7 +32,7 @@ const TopicPage = (props) => {
   }
 
   return (
-    <View style={{ backgroundColor: props.textColor }}>
+    <View>
       {/* quiz modal */}
       <Modal visible={quizOpen} animationType="slide">
         <Quiz title={props.title} exitHandler={closeQuizHandler} />

@@ -6,10 +6,18 @@ import TopicPage from "../components/TopicPage";
 const MathPage = (props) => {
   const { navigation } = props;
   return (
-    <View>
+    <View style={styles.container}>
       <TopicPage title="Math" textColor="#E99A46" navigation={navigation} />
     </View>
   );
 };
 
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: "#E99A46",
+    alignItems: "center",
+    justifyContent: "center",
+  },
+});
 export default MathPage;
