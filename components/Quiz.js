@@ -10,15 +10,12 @@ import {
 import Button from "./Button";
 import Question from "./Question";
 
-import AsyncStorage from "@react-native-community/async-storage";
-
 // import quiz from "./otherquiz.json";
 const Quiz = (props) => {
   const datajson = require("../data/quiz.json");
   const questions = datajson[props.title];
 
   const [score, setScore] = useState(0);
-  const [prevScore, setPrevScore] = useState(0);
 
   const [questionOpen, setQuestionOpen] = useState(false);
 
@@ -30,7 +27,6 @@ const Quiz = (props) => {
         <Question
           json={questions}
           scoreHandler={setScore}
-          prevScoreHandler={setPrevScore}
           closeHandler={setQuestionOpen}
         />
       </Modal>
