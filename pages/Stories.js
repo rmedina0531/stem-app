@@ -1,11 +1,11 @@
 import React from "react";
-import { View, StyleSheet, Text, FlatList, Image } from "react-native";
+import { View, StyleSheet, Text, FlatList, Linking } from "react-native";
 import { Card, Button, Icon } from "react-native-elements";
 
 const Stories = (props) => {
   // const { title } = props.route.params;
   const { articles } = props.route.params;
-  // console.log(props.route);
+  console.log(props.route);
   const renderItem = ({ item }) => {
     return (
       <Card>
@@ -20,6 +20,9 @@ const Stories = (props) => {
         <Button
           buttonStyle={{ borderRadius: 0, marginLeft: 0, marginBottom: 0 }}
           title="View Now"
+          onPress={() => {
+            Linking.openURL(item.url);
+          }}
         />
       </Card>
     );
