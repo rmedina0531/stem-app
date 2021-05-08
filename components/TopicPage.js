@@ -16,17 +16,19 @@ const TopicPage = (props) => {
     let search = "&q=" + "Apple";
     let sortby = "&sortBy=" + "popularity";
 
-    fetch(url + search + sortby)
-      .then((data) => {
-        return data.json();
-      })
-      .then((res) => {
-        console.log(res);
-      })
-      .catch((error) => console.log(error));
-    // const result_data = await res.json;
+    // fetch(url + search + sortby)
+    //   .then((data) => {
+    //     return data.json();
+    //   })
+    //   .then((res) => {
+    //     navigation.navigate("Stories", res.articles);
+    //   })
+    //   .catch((error) => console.log(error));
+
+    //temporary data loading
+    const res = require("../data/testArticles.json");
     // console.log(res);
-    // navigation.navigate("Stories");
+    navigation.navigate("Stories", { articles: res.articles });
   }
 
   return (
