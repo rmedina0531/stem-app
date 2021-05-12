@@ -7,7 +7,12 @@ const MathPage = (props) => {
   const { navigation } = props;
   return (
     <View style={styles.container}>
-      <TopicPage title="Math" textColor="#E99A46" navigation={navigation} />
+      <TopicPage
+        title="Math"
+        textColor="#E99A46"
+        navigation={navigation}
+        search="Math"
+      />
     </View>
   );
 };

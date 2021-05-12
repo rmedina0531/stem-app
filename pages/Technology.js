@@ -11,6 +11,7 @@ const Technology = (props) => {
         title="Technology"
         textColor="#80BFBB"
         navigation={navigation}
+        search="Tech"
       />
     </View>
   );

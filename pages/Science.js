@@ -7,7 +7,12 @@ const Science = (props) => {
   const { navigation } = props;
   return (
     <View style={styles.container}>
-      <TopicPage title="Science" textColor="#5EAC79" navigation={navigation} />
+      <TopicPage
+        title="Science"
+        textColor="#5EAC79"
+        navigation={navigation}
+        search="Science"
+      />
     </View>
   );
 };

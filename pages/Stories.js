@@ -4,8 +4,8 @@ import { Card, Button, Icon } from "react-native-elements";
 
 const Stories = (props) => {
   // const { title } = props.route.params;
-  const { articles } = props.route.params;
-  console.log(props.route);
+  const { title, articles } = props.route.params;
+  console.log(title);
   const renderItem = ({ item }) => {
     return (
       <Card>
@@ -29,6 +29,9 @@ const Stories = (props) => {
   };
   return (
     <View>
+      <Text style={{ fontSize: 30, textAlign: "center" }}>
+        {"Top related " + title + " Stories"}
+      </Text>
       <FlatList
         data={articles}
         renderItem={renderItem}

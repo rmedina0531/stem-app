@@ -13,22 +13,25 @@ const TopicPage = (props) => {
     let key = "?apiKey=7ff285bdf33b42a083f63887f5b59503";
     let url = "https://newsapi.org/v2/everything" + key;
     // search parameter
-    let search = "&q=" + "Apple";
+    let search = "&q=" + props.search;
     let sortby = "&sortBy=" + "popularity";
 
-    // fetch(url + search + sortby)
-    //   .then((data) => {
-    //     return data.json();
-    //   })
-    //   .then((res) => {
-    //     navigation.navigate("Stories", res.articles);
-    //   })
-    //   .catch((error) => console.log(error));
+    fetch(url + search + sortby)
+      .then((data) => {
+        return data.json();
+      })
+      .then((res) => {
+        navigation.navigate("Stories", {
+          title: props.title,
+          articles: res.articles,
+        });
+      })
+      .catch((error) => console.log(error));
 
-    //temporary data loading
-    const res = require("../data/testArticles.json");
+    // //temporary data loading
+    // const res = require("../data/testArticles.json");
     // console.log(res);
-    navigation.navigate("Stories", { articles: res.articles });
+    // navigation.navigate("Stories", { articles: res.articles });
   }
 
   return (
