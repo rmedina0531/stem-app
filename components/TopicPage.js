@@ -15,7 +15,6 @@ const TopicPage = (props) => {
   const [topicDetailsOpen, setTopicDetailsOpen] = useState(false);
   const closeTopicDetails = () => setTopicDetailsOpen(false);
 
-  // const test = require('../assets/scienceTopicImg.png');
   var topicDetailsHeaderImg = require('../assets/scienceTopicImg.png');
 
   currentTopic = (title) => {
@@ -65,17 +64,6 @@ const TopicPage = (props) => {
 
       {/* Topic Details */}
       <Modal visible={topicDetailsOpen} animationType="slide">
-        {/* <TopicDetailsHeader 
-          topic = {props.title}
-          exitHandler= {closeTopicDetails}
-          backgroundColor = {props.textColor}
-          topicImage = {currentTopic(props.title)}
-        />
-        <TopicDetailList
-          topicIcon = {require('../assets/bio.png')}
-          topicTitle = 'Biology'
-          topicIntro = 'The study of Life & Anatomy'
-        /> */}
         <TopicDetails 
           topic = {props.title}
           exit= {closeTopicDetails}

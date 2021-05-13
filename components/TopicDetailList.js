@@ -16,29 +16,60 @@ import images from '../assets/images';
 
 const datajson = require("../data/topicDetails.json");
 
-const TopicDetailList = (props) => {
 
-    const currentTopic = props.category;  // SCIENCE
+
+const TopicDetailList = (props) => {
+    
+    const [modalVisible, setModalVisible] = useState(false);
+
+    const currentTopic = props.category; 
+
 
     let card_list = datajson[currentTopic].map((card, i) => {
         // console.log(card);
+        const currentSubject = card.topicTitle;
+        // console.log(currentSubject);
         return <View key={i} style={styles.topicContainer}>
                     <View style={styles.imgContainer}>
                     <Image 
-                        source={images.topicIcon[card.topicTitle]}
+                        source={images.topicIcon[currentSubject]}
                         style={styles.topicIcon}
                     />
                     </View>
                     <View style={styles.textContainer}>
-                        <Text style={styles.topicTitle}>{card.topicTitle}</Text>
+                        <Text style={styles.topicTitle}>{currentSubject}</Text>
                         <Text style={styles.topicIntro}>{card.topicIntro}</Text>
-                        <Text style={styles.topicLink} onPress={() => 
-                        console.log("here")
-                        }>Learn More</Text>
+                        <TouchableOpacity onPress={() => {
+                            setModalVisible(!modalVisible)
+                        }}>
+                            <Text style={styles.topicLink}>Learn More</Text>
+                        </TouchableOpacity>
                     </View>
+                    <Modal
+                        animationType={'slide'}
+                        transparent={false}
+                        visible={modalVisible}
+                        onRequestClose={() => {
+                            console.log('Modal has been closed.');
+                        }}>
+                        <SafeAreaView>
+                            <Button
+                                title="Click me"
+                                color = "red"
+                                onPress={() => {
+                                setModalVisible(!modalVisible);
+                            }}/>
+                                    {/* {open_Modal} */}
+                            <Text>{currentSubject}</Text>
+                            {console.log(currentSubject)}
+                        </SafeAreaView> 
+                    </Modal>
                 </View>
     });
-    
+
+    // let open_Modal = datajson[currentTopic].map((topic, j) =>{
+    //     return <Text key={j} style={styles.topicTitle}>{topic.topicTitle}</Text>
+    // });
     
     return (
        <SafeAreaView style={styles.listContainer}>
@@ -80,7 +111,8 @@ const TopicDetailList = (props) => {
         },
         textContainer: {
             flex: 1,
-            marginTop: 5
+            marginTop: 5,
+            marginLeft: 10
         },
         topicTitle: {
             fontSize: 25,
@@ -89,13 +121,13 @@ const TopicDetailList = (props) => {
         },
         topicIntro: {
             color: '#595959',
-            marginTop: 5,
-            marginBottom: 15,
+            marginTop: 3,
+            marginBottom: 10,
             fontSize: 15
         },
         topicLink: {
             color: '#5EAC79',
             fontSize: 15
-        }
+        },
     });
     

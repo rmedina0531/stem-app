@@ -31,9 +31,6 @@ const topics = datajson[props.title];
             />
             <TopicDetailList
                 category = {props.topic}  
-                // topicIcon = {require('../assets/bio.png')}
-                // topicTitle = 'Biology'
-                // topicIntro = 'The study of Life & Anatomy'
             />
        </View>
       );
