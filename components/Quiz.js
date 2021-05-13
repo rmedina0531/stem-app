@@ -16,7 +16,6 @@ const Quiz = (props) => {
   const questions = datajson[props.title];
 
   const [score, setScore] = useState(0);
-  const [prevScore, setPrevScore] = useState(0);
 
   const [questionOpen, setQuestionOpen] = useState(false);
 
@@ -31,8 +30,7 @@ const Quiz = (props) => {
           closeHandler={setQuestionOpen}
         />
       </Modal>
-      <Text style={styles.title}>Quiz Title</Text>
-      <Text style={styles.title}>Previous Score</Text>
+      <Text style={styles.title}>{props.title} Quiz</Text>
       <Button
         text="Start Quiz"
         onPress={() => setQuestionOpen(true)}

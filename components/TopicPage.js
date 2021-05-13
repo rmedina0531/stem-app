@@ -8,6 +8,7 @@ import TopicDetailList from "./TopicDetailList";
 import TopicDetails from "./TopicDetails";
 
 const TopicPage = (props) => {
+  const { navigation } = props;
   const [quizOpen, setQuizOpen] = useState(false);
   const closeQuizHandler = () => setQuizOpen(false);
 
@@ -30,9 +31,33 @@ const TopicPage = (props) => {
     return topicDetailsHeaderImg
   }
   
+  async function storiesHandler() {
+    let key = "?apiKey=7ff285bdf33b42a083f63887f5b59503";
+    let url = "https://newsapi.org/v2/everything" + key;
+    // search parameter
+    let search = "&q=" + props.search;
+    let sortby = "&sortBy=" + "popularity";
+
+    fetch(url + search + sortby)
+      .then((data) => {
+        return data.json();
+      })
+      .then((res) => {
+        navigation.navigate("Stories", {
+          title: props.title,
+          articles: res.articles,
+        });
+      })
+      .catch((error) => console.log(error));
+
+    // //temporary data loading
+    // const res = require("../data/testArticles.json");
+    // console.log(res);
+    // navigation.navigate("Stories", { articles: res.articles });
+  }
 
   return (
-    <View style={{ backgroundColor: props.textColor }}>
+    <View>
       {/* quiz modal */}
       <Modal visible={quizOpen} animationType="slide">
         <Quiz title={props.title} exitHandler={closeQuizHandler} />
@@ -88,6 +113,7 @@ const TopicPage = (props) => {
             text="Stories"
             style={styles.buttonStyle}
             textColor={props.textColor}
+            onPress={storiesHandler}
           />
         </View>
         <View

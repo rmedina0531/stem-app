@@ -1,0 +1,121 @@
+{
+  "articles": [
+    {
+      "author": "Brendan Hesse",
+      "content": "Apple is planning to reformat its serial numbers for Macs and MacBook this year. Currently, Macs use the same 12-digit alphanumeric serial codes as other Apple products, but Apple will soon switch th… [+3651 chars]",
+      "description": "Apple is planning to reformat its serial numbers for Macs and MacBook this year. Currently, Macs use the same 12-digit alphanumeric serial codes as other Apple products, but Apple will soon switch them to randomized strings between 8 and 12 characters long.Re…",
+      "publishedAt": "2021-04-15T21:00:00Z",
+      "source": {
+        "id": null,
+        "name": "Lifehacker.com"
+      },
+      "title": "Learn the Secret Language of Apple Serial Numbers (While You Still Can)",
+      "url": "https://lifehacker.com/learn-the-secret-language-of-apple-serial-numbers-whil-1846693527",
+      "urlToImage": "https://i.kinja-img.com/gawker-media/image/upload/c_fill,f_auto,fl_progressive,g_center,h_675,pg_1,q_80,w_1200/brqgqs1xpgk0ov85yrdd.jpg"
+    },
+    {
+      "author": "David Murphy",
+      "content": "Apple is all about the three Ss these days: subscriptions, services, and saturation (for its new iMacs, at least). And while you can hardly blame the company for wanting to diversify its revenue, it … [+1851 chars]",
+      "description": "Apple is all about the three Ss these days: subscriptions, services, and saturation (for its new iMacs, at least). And while you can hardly blame the company for wanting to diversify its revenue, it can sometimes feel like there’s just a lot to buy from Apple…",
+      "publishedAt": "2021-04-30T19:00:00Z",
+      "source": {
+        "id": null,
+        "name": "Lifehacker.com"
+      },
+      "title": "How to Get Started With Apple Fitness+",
+      "url": "https://lifehacker.com/how-to-get-started-with-apple-fitness-1846796643",
+      "urlToImage": "https://i.kinja-img.com/gawker-media/image/upload/c_fill,f_auto,fl_progressive,g_center,h_675,pg_1,q_80,w_1200/phm4cwupgbqsizejzotp.jpg"
+    },
+    {
+      "author": "Brendan Hesse",
+      "content": "Apple AirTags attach to all sorts of thingsyour keys, purse, luggage, even your pets collarbut for all their versatility as tiny tracking devices, AirTags can only be associated with one Apple ID at … [+1553 chars]",
+      "description": "Apple AirTags attach to all sorts of things—your keys, purse, luggage, even your pet’s collar—but for all their versatility as tiny tracking devices, AirTags can only be associated with one Apple ID at a time. That’s fine if you’re the only one using the AirT…",
+      "publishedAt": "2021-05-04T14:30:00Z",
+      "source": {
+        "id": null,
+        "name": "Lifehacker.com"
+      },
+      "title": "How to Reset an AirTag to Pair With a New Apple ID",
+      "url": "https://lifehacker.com/how-to-reset-an-airtag-to-pair-with-a-new-apple-id-1846813390",
+      "urlToImage": "https://i.kinja-img.com/gawker-media/image/upload/c_fill,f_auto,fl_progressive,g_center,h_675,pg_1,q_80,w_1200/240ca0a7b37a19fa7ac0c581e58f5947.jpg"
+    },
+    {
+      "author": "David Murphy",
+      "content": "Its Apple day! And just when I was starting to wonder if the world still had the capacity to get excited about hour-long product announcements. At its Spring Loaded event, Apple roared out of the gat… [+6771 chars]",
+      "description": "It’s Apple day! And just when I was starting to wonder if the world still had the capacity to get excited about hour-long product announcements. At its “Spring Loaded” event, Apple roared out of the gate, announcing some pretty wicked upgrades to the Mac and …",
+      "publishedAt": "2021-04-20T21:30:00Z",
+      "source": {
+        "id": null,
+        "name": "Lifehacker.com"
+      },
+      "title": "When You Can Pre-Order Everything Apple Announced Today",
+      "url": "https://lifehacker.com/when-you-can-pre-order-everything-apple-announced-today-1846722213",
+      "urlToImage": "https://i.kinja-img.com/gawker-media/image/upload/c_fill,f_auto,fl_progressive,g_center,h_675,pg_1,q_80,w_1200/vestx7gdwfrz5330hguw.png"
+    },
+    {
+      "author": "David Murphy",
+      "content": "You should regularly take a moment to check on your iPhones battery life. And given how easy Apple made it starting in iOS 11.3, we really have no excuse. All you have to do is hit Settings &gt; Batt… [+2414 chars]",
+      "description": "You should regularly take a moment to check on your iPhone’s battery life. And given how easy Apple made it starting in iOS 11.3, we really have no excuse. All you have to do is hit Settings > Battery > Battery Health, and you’ll be able to see the maximum ca…",
+      "publishedAt": "2021-04-28T18:30:00Z",
+      "source": {
+        "id": null,
+        "name": "Lifehacker.com"
+      },
+      "title": "Why Your iPhone Battery Is Recalibrating in iOS 14.5",
+      "url": "https://lifehacker.com/why-your-iphone-battery-is-recalibrating-in-ios-14-5-1846781068",
+      "urlToImage": "https://i.kinja-img.com/gawker-media/image/upload/c_fill,f_auto,fl_progressive,g_center,h_675,pg_1,q_80,w_1200/wmkhdrbaiod8srvlryn2.jpg"
+    },
+    {
+      "author": "David Murphy",
+      "content": "Does this sound familiar? Youve taken such good care of your older MacBook that Tim Cook himself wouldnt be able to tell it from a fresh out-of-the-box model. Youve fawned over it, protected it from … [+5455 chars]",
+      "description": "Does this sound familiar? You’ve taken such good care of your older MacBook that Tim Cook himself wouldn’t be able to tell it from a fresh out-of-the-box model. You’ve fawned over it, protected it from harm, and are now ready to trade it in for something newe…",
+      "publishedAt": "2021-04-15T13:30:00Z",
+      "source": {
+        "id": null,
+        "name": "Lifehacker.com"
+      },
+      "title": "What to Do If You Get a Bad Trade-In Offer From Apple",
+      "url": "https://lifehacker.com/what-to-do-if-you-get-a-bad-trade-in-offer-from-apple-1846684998",
+      "urlToImage": "https://i.kinja-img.com/gawker-media/image/upload/c_fill,f_auto,fl_progressive,g_center,h_675,pg_1,q_80,w_1200/wf3uvutamsr3shgx0dul.jpg"
+    },
+    {
+      "author": "David Murphy",
+      "content": "Apple finally released its much-anticipated App Tracking Transparency feature with the launch of iOS 14.5, and its incredibly helpful if you want some fine-grain control over which apps can track oth… [+3489 chars]",
+      "description": "Apple finally released its much-anticipated App Tracking Transparency feature with the launch of iOS 14.5, and it’s incredibly helpful if you want some fine-grain control over which apps can track other aspects of your digital activity. That’s assuming, of co…",
+      "publishedAt": "2021-04-28T20:45:00Z",
+      "source": {
+        "id": null,
+        "name": "Lifehacker.com"
+      },
+      "title": "How to Fix Your iPhone's 'App Tracking Transparency' If It's Grayed Out in iOS 14.5",
+      "url": "https://lifehacker.com/how-to-fix-your-iphones-app-tracking-transparency-if-it-1846782530",
+      "urlToImage": "https://i.kinja-img.com/gawker-media/image/upload/c_fill,f_auto,fl_progressive,g_center,h_675,pg_1,q_80,w_1200/jt6lz08yxe2dvt8ju3x4.jpg"
+    },
+    {
+      "author": "David Murphy",
+      "content": "Share ETA is one of the best features to come from iOS 13if you and your friends are Apple Maps users, that is. And once youve updated to iOS 14.5, the latest version of Apples mobile operating syste… [+2745 chars]",
+      "description": "“Share ETA” is one of the best features to come from iOS 13—if you and your friends are Apple Maps users, that is. And once you’ve updated to iOS 14.5, the latest version of Apple’s mobile operating system, you’ll be able to send ETAs to friends when you’re c…",
+      "publishedAt": "2021-04-29T18:30:00Z",
+      "source": {
+        "id": null,
+        "name": "Lifehacker.com"
+      },
+      "title": "How to Share Your ETA in iOS 14.5 if You're Driving, Biking, or Walking",
+      "url": "https://lifehacker.com/how-to-share-your-eta-in-ios-14-5-if-youre-driving-bik-1846788341",
+      "urlToImage": "https://i.kinja-img.com/gawker-media/image/upload/c_fill,f_auto,fl_progressive,g_center,h_675,pg_1,q_80,w_1200/a8abcxbiavtwfp0nwxvj.jpg"
+    },
+    {
+      "author": "Brendan Hesse",
+      "content": "Apple recently unveiled its M1 iMac models for 2021. The new desktop computers come in a variety of joyful hues: blue, green, orange, pink, purple, yellow, and classic Mac silver. While the available… [+2075 chars]",
+      "description": "Apple recently unveiled its M1 iMac models for 2021. The new desktop computers come in a variety of joyful hues: blue, green, orange, pink, purple, yellow, and classic Mac silver. While the available color options differ between the new iMac’s various hardwar…",
+      "publishedAt": "2021-04-28T17:30:00Z",
+      "source": {
+        "id": null,
+        "name": "Lifehacker.com"
+      },
+      "title": "Wrap Your New iMac in Black If You Hate Bezels, Joy, and Money",
+      "url": "https://lifehacker.com/wrap-your-new-imac-in-black-if-you-hate-bezels-joy-an-1846775872",
+      "urlToImage": "https://i.kinja-img.com/gawker-media/image/upload/c_fill,f_auto,fl_progressive,g_center,h_675,pg_1,q_80,w_1200/qjexvxwzy3o2wbdody5g.png"
+    }
+  ]
+}

@@ -3,12 +3,26 @@ import React from "react";
 import { StyleSheet, View, Text } from "react-native";
 import TopicPage from "../components/TopicPage";
 
-const MathPage = () => {
+const MathPage = (props) => {
+  const { navigation } = props;
   return (
-    <View>
-      <TopicPage title="Math" textColor="#E99A46" />
+    <View style={styles.container}>
+      <TopicPage
+        title="Math"
+        textColor="#E99A46"
+        navigation={navigation}
+        search="Math"
+      />
     </View>
   );
 };
 
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: "#E99A46",
+    alignItems: "center",
+    justifyContent: "center",
+  },
+});
 export default MathPage;
