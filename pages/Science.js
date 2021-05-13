@@ -6,7 +6,7 @@ import TopicPage from "../components/TopicPage";
 const Science = () => {
   return (
     <View>
-      <TopicPage title="Science" textColor="#5EAC79" />
+      <TopicPage title="Science" textColor="#a5cf91"/>
     </View>
   );
 };

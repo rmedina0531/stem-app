@@ -20,3 +20,8 @@ git commit -m 'message'
 
 #merge into current branch
 git merge [branchname]
+
+git stash save "Whatever you changed"
+git stash list // shows what changes you stashed in a list
+git stash apply listName
+git stash pop
