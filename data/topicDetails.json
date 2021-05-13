@@ -1,0 +1,68 @@
+{
+    "Science": [
+      {
+        "topicIcon": "../assets/bio.png",
+        "topicTitle": "Biology",
+        "topicIntro": "The study of Life and Anatomy.",
+        "topicDescription": "asdfghjkl",
+        "resources": "asdfghjk"
+      },
+      {
+        "topicIcon": "../assets/chem.png",
+        "topicTitle": "Chemistry",
+        "topicIntro": "The study of elements and chemicals reactions.",
+        "topicDescription": "asdfghjkl",
+        "resources": "asdfghjk"
+      },
+      {
+        "topicIcon": "../assets/animal.png",
+        "topicTitle": "Animal",
+        "topicIntro": "The study of elements and chemicals reactions.",
+        "topicDescription": "asdfghjkl",
+        "resources": "asdfghjk"
+      },
+      {
+        "topicIcon": "../assets/stars.png",
+        "topicTitle": "Astronomy",
+        "topicIntro": "The study of stars,planets and galaxies.",
+        "topicDescription": "asdfghjkl",
+        "resources": "asdfghjk"
+      },
+      {
+        "topicIcon": "../assets/physics.png",
+        "topicTitle": "Physics",
+        "topicIntro": "The study of gravity and movement.",
+        "topicDescription": "asdfghjkl",
+        "resources": "asdfghjk"
+      },
+      {
+        "topicIcon": "../assets/elec.png",
+        "topicTitle": "Electricity",
+        "topicIntro": "The study of weather and electricity.",
+        "topicDescription": "asdfghjkl",
+        "resources": "asdfghjk"
+      }
+    ],
+    "Technology": [
+      {
+        "type": "text",
+        "question": "Technology What is 2+2?",
+        "answer": "d"
+      }
+    ],
+    "Engineering": [
+      {
+        "type": "text",
+        "question": "Engineering What is 2+2?",
+        "answer": "d"
+      }
+    ],
+    "Math": [
+      {
+        "type": "text",
+        "question": "Math What is 2+2?",
+        "answer": "d"
+      }
+    ]
+  }
+  
