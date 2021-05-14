@@ -15,7 +15,7 @@ const Home = (props) => {
       <Text style={styles.title}>STEM-VERSE</Text>
       <View style={styles.buttonContainer}>
         <Button text="Science" onPress={scienceHandler} color="#5EAC79" />
-        <Button text="Technology" onPress={technologyHandler} color="#80BFBB" />
+        <Button text="Technology" onPress={technologyHandler} color="#3698B4" />
         <Button
           text="Engineering"
           onPress={engineeringHandler}

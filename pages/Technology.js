@@ -9,7 +9,7 @@ const Technology = (props) => {
     <View style={styles.container}>
       <TopicPage
         title="Technology"
-        textColor="#80BFBB"
+        textColor="#3698B4"
         navigation={navigation}
         search="Tech"
       />
@@ -22,7 +22,7 @@ export default Technology;
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#80BFBB",
+    backgroundColor: "#3698B4",
     alignItems: "center",
     justifyContent: "center",
   },

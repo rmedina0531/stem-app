@@ -18,7 +18,7 @@ return (
     <View style={{
       backgroundColor: props.backgroundColor,
       borderRadius: 20,
-      flex: 0.5,
+      flex: 1,
     }}>
      <SafeAreaView style={styles.detailsContainer}>
         <TouchableOpacity activeOpacity={0.5} onPress={props.exitHandler}>
@@ -44,7 +44,7 @@ export default TopicDetailsHeader;
 const styles = StyleSheet.create({
     detailsContainer: {
       // height: '50%',
-      flex: 2,
+      flex: 1,
     },
     goBackBtn: {
       marginLeft: 30,
@@ -62,7 +62,7 @@ const styles = StyleSheet.create({
       
     },
     imgContainer: {
-      flex: 2,
+      flex: 3,
       justifyContent: 'center',
       alignItems: 'center',
     }
