@@ -14,6 +14,7 @@ import { Image } from "react-native-elements";
 import images from '../assets/images';
 import TopicDetailsHeader from "./TopicDetailsHeader";
 import { FlatList } from "react-native-gesture-handler";
+import { Linking } from 'react-native';
 
 const DetailEntry = (props) => {
   let [modalVisible, setModalVisible] = useState(false);
@@ -35,18 +36,39 @@ const DetailEntry = (props) => {
                         source={images.topicIcon[item.topicTitle]} 
                         style={styles.topicIcon} 
                     />
-                    <Text style={{ fontSize: 40, margin: 25 }} >{item.topicTitle}</Text>
+                    <Text style={{ fontSize: 40, marginTop: 25, marginBottom: 10, fontWeight:'bold', color: '#595959'}} >{item.topicTitle}</Text>
+                    <View style = {styles.lineStyle} />
                 </View>
+                <ScrollView>
                 <View  style={styles.moreInfoText}>
-                    <Text style={{ fontSize: 20, textAlign: 'center', margin: 20}} >{item.topicDescription}</Text>
+                    <Text style={{ fontSize: 25, textAlign: 'center', margin: 10, color: '#595959', fontWeight:'bold'}}>What is {item.topicTitle}?</Text>
+                    <Text style={{ fontSize: 20, textAlign: 'center', marginTop: 10, marginBottom: 10, marginLeft:25, marginRight: 25,lineHeight: 35}} >{item.topicDescription}</Text>
+                    <Text style={{ fontSize: 25, textAlign: 'center', margin: 10, color: '#595959', fontWeight:'bold'}}>Watch a Video!</Text>
+                    <Text style={{color: 'blue', fontSize: 20, margin: 10}}
+                        onPress={() => Linking.openURL(item.resources)}>
+                        Video on {item.topicTitle}
+                    </Text>
+
                 </View>
-                <Button
-                    title="Click me"
-                    color="red"
-                    onPress={() => {
-                        setModalVisible(!modalVisible);
-                    }}
-                />
+                </ScrollView>
+                <View style={{justifyContent: 'center', alignItems: 'center', height: 100, width: '100%'}}>
+                    <TouchableOpacity style={{backgroundColor: props.maincolor, width:'40%', borderRadius: '40px', justifyContent: 'center', alignItems: 'center'}}
+                        onPress={() => {
+                            setModalVisible(!modalVisible);
+                        }}
+                    >
+                        <Button
+                            style={{
+                                height: 20,
+                                width: 20}}
+                                title="Close"
+                                color="white"
+                                onPress={() => {
+                            setModalVisible(!modalVisible);
+                        }}
+                        />
+                    </TouchableOpacity>
+                </View>
             </View>
         </View>
         </SafeAreaView>
@@ -69,7 +91,7 @@ const DetailEntry = (props) => {
             setModalVisible(!modalVisible);
             }}
         >
-        <Text style={styles.topicLink}>Learn More</Text>
+        <Text style={{color: props.maincolor,fontSize: 15 }}>Learn More</Text>
       </TouchableOpacity>
       </View>
     </View>
@@ -151,10 +173,6 @@ const styles = StyleSheet.create({
     marginBottom: 10,
     fontSize: 15,
   },
-  topicLink: {
-    color: '#5EAC79',
-    fontSize: 15
-  },
   flatlistContainer: {
     flex: 0.5,
   },
@@ -177,5 +195,16 @@ const styles = StyleSheet.create({
   moreInfoText: {
       alignItems: 'center',
       justifyContent: 'center',
-  }
+  },
+  lineStyle:{
+    borderWidth: 1,
+    width: 250,
+    borderColor:'#d1cfcf',
+    margin:10,
+    borderRadius: 30
+
+  },
+ 
+ 
+
 });

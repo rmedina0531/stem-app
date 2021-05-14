@@ -1,178 +1,155 @@
 {
   "Science": [
     {
-      "topicIcon": "../assets/bio.png",
       "topicTitle": "Biology",
       "topicIntro": "The study of Life and Anatomy.",
       "topicDescription": "Biology is the study of living things. A biologist is a scientist who studies biology. Biologists try to understand the natural world and the things that live in it. These things include plants, animals, fungi, protozoa, algae, bacteria, and viruses.",
-      "resources": "asdfghjk"
+      "resources": "https://www.youtube.com/watch?v=6v8djXa-IPQ"
     },
     {
-      "topicIcon": "../assets/chem.png",
       "topicTitle": "Chemistry",
       "topicIntro": "The study of elements and chemicals reactions.",
-      "topicDescription": "some descriptions for later",
-      "resources": "asdfghjk"
+      "topicDescription": "Chemistry is one of the major branches of science. People who work in chemistry are called chemists. Chemists study the substances that make up matter—everything that takes up space in the universe. They also study the changes that take place when substances are combined. These changes are called chemical reactions.",
+      "resources": "https://www.youtube.com/watch?v=t8x3wdXZGEY"
     },
     {
-      "topicIcon": "../assets/animal.png",
       "topicTitle": "Animal",
-      "topicIntro": "The study of elements and chemicals reactions.",
-      "topicDescription": "something random",
-      "resources": "asdfghjk"
+      "topicIntro": "The study of animal behavior, health and anatomy.",
+      "topicDescription": "Animals are living things. Like plants, animals need food and water to live. Unlike plants, which make their own food, animals feed themselves by eating plants or other animals. Animals can also sense what goes on around them. Their bodies allow them to move in reaction to their surroundings. They use their senses and movement to find food, mates, and safety.",
+      "resources": "https://www.youtube.com/watch?v=xDSFlRunlrU"
     },
     {
-      "topicIcon": "../assets/stars.png",
       "topicTitle": "Astronomy",
       "topicIntro": "The study of stars,planets and galaxies.",
-      "topicDescription": "just testing",
-      "resources": "asdfghjk"
+      "topicDescription": "Astronomy is one of the oldest sciences in the world. The study of astronomy involves all of the objects outside Earth’s atmosphere. These include the Sun, Moon, planets, stars, galaxies, and all other matter in the universe. People known as astronomers have studied these objects for thousands of years.",
+      "resources": "https://www.youtube.com/watch?v=0rHUDWjR5gg&t=561s"
     },
     {
-      "topicIcon": "../assets/physics.png",
       "topicTitle": "Physics",
       "topicIntro": "The study of gravity and movement.",
-      "topicDescription": "asdfghjkl",
-      "resources": "asdfghjk"
+      "topicDescription": "Physics is one of the major branches of science. People who work in physics are called physicists. Physicists study matter and the forces (pushes or pulls) that act on it. (Matter is what makes up all physical objects.) Physicists also study many different forms of energy. The objects that physicists study range in size from the tiny building blocks of matter to huge groups of stars.",
+      "resources": "https://www.youtube.com/watch?v=Y-NQOJ3Uz4w"
     },
     {
-      "topicIcon": "../assets/elec.png",
-      "topicTitle": "Electricity",
-      "topicIntro": "The study of weather and electricity.",
-      "topicDescription": "asdfghjkl",
-      "resources": "asdfghjk"
+      "topicTitle": "Weather",
+      "topicIntro": "The study of weather and climate.",
+      "topicDescription": "Weather is the daily state of the atmosphere, or air, in any given place. Climate is the average of weather conditions in an area over a long period. The weather is important to people. It affects their comfort, their food supply, and even their safety.",
+      "resources": "https://www.youtube.com/watch?v=YbAWny7FV3w"
     }
   ],
   "Technology": [
     {
-      "topicIcon": "../assets/physics.png",
       "topicTitle": "Computer Science",
-      "topicIntro": "The study of gravity and movement.",
-      "topicDescription": "asdfghjkl",
-      "resources": "asdfghjk"
+      "topicIntro": "The study of software development and algorithms.",
+      "topicDescription": "Computer science is the study of the numerous processes that interact with different sources of data and information and that can be represented, as a result, in the form of apps, games, software or programs.",
+      "resources": "https://www.youtube.com/watch?v=XMZFUnAgOqs"
     },
     {
-      "topicIcon": "../assets/physics.png",
       "topicTitle": "Game Development",
-      "topicIntro": "The study of gravity and movement.",
-      "topicDescription": "asdfghjkl",
-      "resources": "asdfghjk"
+      "topicIntro": "Applied Computer Science in creating Games for devices, consoles or PC.",
+      "topicDescription": "Game Development is the art of creating games and describes the design, development and release of a game. It may involve concept generation, design, build, test and release. While you create a game, it is important to think about the game mechanics, rewards, player engagement and level design.",
+      "resources": "https://www.youtube.com/watch?v=Ex1ktxOxVgI"
     },
     {
-      "topicIcon": "../assets/physics.png",
       "topicTitle": "Cybersecurity",
-      "topicIntro": "The study of gravity and movement.",
-      "topicDescription": "asdfghjkl",
-      "resources": "asdfghjk"
+      "topicIntro": "The study of protecting computer operating systems, networks, and data from cyber attacks.",
+      "topicDescription": "Cyber security refers to the body of technologies, processes, and practices designed to protect networks, devices, programs, and data from attack, damage, or unauthorized access. Cyber security may also be referred to as information technology security.",
+      "resources": "https://www.youtube.com/watch?v=sdpxddDzXfE"
     },
     {
-      "topicIcon": "../assets/physics.png",
-      "topicTitle": "Data Analysis",
-      "topicIntro": "The study of gravity and movement.",
-      "topicDescription": "asdfghjkl",
-      "resources": "asdfghjk"
+      "topicTitle": "Data Science",
+      "topicIntro": "The study of extracting meaningul data.",
+      "topicDescription": "Data science combines multiple fields, including statistics, scientific methods, and data analysis, to extract value from data. Those who practice data science are called data scientists, and they combine a range of skills to analyze data collected from the web, smartphones, customers, sensors, and other sources.",
+      "resources": "https://www.youtube.com/watch?v=oMBE2TeH2no"
     },
     {
-      "topicIcon": "../assets/physics.png",
       "topicTitle": "AI",
-      "topicIntro": "The study of gravity and movement.",
-      "topicDescription": "asdfghjkl",
-      "resources": "asdfghjk"
+      "topicIntro": "The study and design of intelligent agents",
+      "topicDescription": "Intelligence is the ability to learn and to deal with new situations. When a computer or a robot solves a problem or uses language, it may seem to be intelligent. However, this type of intelligence is different from human intelligence. It is called artificial intelligence, or AI.",
+      "resources": "https://www.youtube.com/watch?v=a0_lo_GDcFw"
     },
     {
-      "topicIcon": "../assets/physics.png",
       "topicTitle": "Machine Learning",
-      "topicIntro": "The study of gravity and movement.",
-      "topicDescription": "asdfghjkl",
-      "resources": "asdfghjk"
+      "topicIntro": "The study of development of computer programs that can access data and use it to learn for themselves.",
+      "topicDescription": "Machine learning is a subfield of artificial intelligence. Instead of relying on explicit programming, it is a system through which computers use a massive set of data and apply algorithms to 'train' on--to teach themselves--and make predictions.",
+      "resources": "https://www.youtube.com/watch?v=QghjaS0WQQU"
     }
   ],
   "Engineering": [
     {
-      "topicIcon": "../assets/physics.png",
       "topicTitle": "Electrical",
-      "topicIntro": "The study of gravity and movement.",
-      "topicDescription": "asdfghjkl",
-      "resources": "asdfghjk"
+      "topicIntro": "The study of creating, designing and managing electricity to help power the world.",
+      "topicDescription": "Electrical engineering is a subject of engineering. Its goal is to develop (think and make) different things that use electricity in a helpful way. Electrical engineers fix or design new and better ways of using devices that use electricity. Big subjects in electrical engineering include power generation, automation and control of robots, digital systems, and information technology (using radio and computers to move and use data).",
+      "resources": "https://www.youtube.com/watch?v=0uY5z125X7E"
     },
     {
-      "topicIcon": "../assets/physics.png",
       "topicTitle": "Mechanical",
-      "topicIntro": "The study of gravity and movement.",
-      "topicDescription": "asdfghjkl",
-      "resources": "asdfghjk"
+      "topicIntro": "The study of of objects and systems in motion.",
+      "topicDescription": "Mechanical engineering is an engineering branch that combines engineering physics and mathematics principles with materials science to design, analyze, manufacture, and maintain mechanical systems.",
+      "resources": "https://www.youtube.com/watch?v=JhzjIPvWG7Y"
     },
     {
-      "topicIcon": "../assets/physics.png",
       "topicTitle": "Robotics",
-      "topicIntro": "The study of gravity and movement.",
-      "topicDescription": "asdfghjkl",
-      "resources": "asdfghjk"
+      "topicIntro": "The study of robots through software and hardware.",
+      "topicDescription": "Robotics is the intersection of science, engineering and technology that produces machines, called robots, that substitute for (or replicate) human actions.",
+      "resources": "https://www.youtube.com/watch?v=uNfUAJBuZ0s"
     },
     {
-      "topicIcon": "../assets/physics.png",
       "topicTitle": "Civil",
-      "topicIntro": "The study of gravity and movement.",
-      "topicDescription": "asdfghjkl",
-      "resources": "asdfghjk"
+      "topicIntro": "The study of designing and constructing the environments in which humans live.",
+      "topicDescription": "Civil engineering is a professional engineering discipline that deals with the design, construction, and maintenance of the physical and naturally built environment, including public works such as roads, bridges, canals, dams, airports, sewerage systems, pipelines, structural components of buildings, and railways.",
+      "resources": "https://www.youtube.com/watch?v=-xbtnz4wdaA"
     },
     {
-      "topicIcon": "../assets/physics.png",
+
       "topicTitle": "Computer",
-      "topicIntro": "The study of gravity and movement.",
-      "topicDescription": "asdfghjkl",
-      "resources": "asdfghjk"
+      "topicIntro": "The study of integrating electronic engineering with computer sciences.",
+      "topicDescription": "asdfgComputer Engineering involves the design and development of systems based on computers and complex digital logic devices. These systems find use in such diverse tasks as computation, communication, entertainment, information processing, artificial intelligence, and control.hjkl",
+      "resources": "https://www.youtube.com/watch?v=04ht0kSJ0I4"
     },
     {
-      "topicIcon": "../assets/physics.png",
       "topicTitle": "Industrial",
-      "topicIntro": "The study of gravity and movement.",
-      "topicDescription": "asdfghjkl",
-      "resources": "asdfghjk"
+      "topicIntro": "The study of figuring out how to make or do things better.",
+      "topicDescription": "Industrial engineering is an engineering profession that is concerned with the optimization of complex processes, systems, or organizations by developing, improving and implementing integrated systems of people, money, knowledge, information and equipment.hjkl",
+      "resources": "https://www.youtube.com/watch?v=5twpa1xmlJ0"
     }
   ],
   "Math": [
     {
-      "topicIcon": "../assets/stats.png",
       "topicTitle": "Data & Statistics",
-      "topicIntro": "The study of gravity and movement.",
-      "topicDescription": "asdfghjkl",
-      "resources": "asdfghjk"
+      "topicIntro": "The study of collecting, analyzing, interpreting and presenting data.",
+      "topicDescription": "Statistics is a branch of applied mathematics that involves the collection, description, analysis, and inference of conclusions from quantitative data. The mathematical theories behind statistics rely heavily on differential and integral calculus, linear algebra, and probability theory.",
+      "resources": "https://www.youtube.com/watch?v=SFPGVTThJNk"
     },
     {
-      "topicIcon": "../assets/calc.png",
       "topicTitle": "Calculus",
-      "topicIntro": "The study of gravity and movement.",
-      "topicDescription": "asdfghjkl",
-      "resources": "asdfghjk"
+      "topicIntro": "The study of how things change.",
+      "topicDescription": "Calculus is a branch of mathematics that helps us understand changes between values that are related by a function. For example, given a formula indicating how much money one gets every day, calculus would help one understand related formulas, such as how much money one has in total, and whether one is getting more or less money than before. Many of these formulas are functions of time, and one way to think of calculus is to see it as a study of functions of time.",
+      "resources": "https://www.youtube.com/watch?v=UukVP7Mg3TU&t=102s"
     },
     {
-      "topicIcon": "../assets/geo.png",
       "topicTitle": "Geometry",
-      "topicIntro": "The study of gravity and movement.",
-      "topicDescription": "asdfghjkl",
-      "resources": "asdfghjk"
+      "topicIntro": "The study of space related with distance, shape, size, and relative position of figures.",
+      "topicDescription": "Geometry is a branch of mathematics that studies the sizes, shapes, positions angles and dimensions of things. Flat shapes like squares, circles, and triangles are a part of flat geometry and are called 2D shapes.",
+      "resources": "https://www.youtube.com/watch?v=lBCIGY3dWXQ"
     },
     {
-      "topicIcon": "../assets/gametheory.png",
       "topicTitle": "Game Theory",
-      "topicIntro": "The study of gravity and movement.",
-      "topicDescription": "asdfghjkl",
-      "resources": "asdfghjk"
+      "topicIntro": "The mathematical study of decision-making, of conflict and strategy in social situations..",
+      "topicDescription": "Game theory studies interactive decision-making, where the outcome for each participant or 'player' depends on the actions of all.",
+      "resources": "https://www.youtube.com/watch?v=YueJukoFBMU"
     },
     {
-      "topicIcon": "../assets/graph.png",
       "topicTitle": "Graph Theory",
-      "topicIntro": "The study of gravity and movement.",
-      "topicDescription": "asdfghjkl",
-      "resources": "asdfghjk"
+      "topicIntro": "The study of graphs used to model relations between objects.",
+      "topicDescription": "Graph Theory is ultimately the study of relationships. Given a set of nodes & connections, which can abstract anything from city layouts to computer data, graph theory provides a helpful tool to quantify & simplify the many moving parts of dynamic systems",
+      "resources": "https://www.youtube.com/watch?v=720uyg0Dd_M"
     },
     {
-      "topicIcon": "../assets/prob.png",
       "topicTitle": "Probability",
-      "topicIntro": "The study of gravity and movement.",
-      "topicDescription": "asdfghjkl",
-      "resources": "asdfghjk"
+      "topicIntro": "The mathematical study of phenomena characterized by randomness or uncertainty.",
+      "topicDescription": "Probability is the branch of mathematics concerning numerical descriptions of how likely an event is to occur, or how likely it is that a proposition is true. The probability of an event is a number between 0 and 1, where, roughly speaking, 0 indicates impossibility of the event and 1 indicates certainty.",
+      "resources": "https://www.youtube.com/watch?v=Kgudt4PXs28"
     }
   ]
 }

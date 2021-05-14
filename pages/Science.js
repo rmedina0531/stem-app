@@ -9,7 +9,7 @@ const Science = (props) => {
     <View style={styles.container}>
       <TopicPage
         title="Science"
-        textColor="#a5cf91"
+        textColor="#98c484"
         navigation={navigation}
         search="Science"
       />
@@ -19,7 +19,7 @@ const Science = (props) => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#a5cf91",
+    backgroundColor: "#98c484",
     alignItems: "center",
     justifyContent: "center",
   },
