@@ -15,17 +15,18 @@ const TopicPage = (props) => {
   const [topicDetailsOpen, setTopicDetailsOpen] = useState(false);
   const closeTopicDetails = () => setTopicDetailsOpen(false);
 
-  var topicDetailsHeaderImg = require('../assets/scienceTopicImg.png');
 
   currentTopic = (title) => {
+    let topicDetailsHeaderImg = require('../assets/scienceTopicImg.png');
+
     if(title == 'Science'){
       topicDetailsHeaderImg = require('../assets/scienceTopicImg.png');
     }else if(title == 'Technology'){
       topicDetailsHeaderImg = require('../assets/techTopicImg.png');
     }else if(title == 'Engineering'){
-      topicDetailsHeaderImg = require('../assets/techTopicImg.png');
+      topicDetailsHeaderImg = require('../assets/engineeringTopicImg.png');
     }else if(title == 'Math'){
-      topicDetailsHeaderImg = require('../assets/techTopicImg.png');
+      topicDetailsHeaderImg = require('../assets/mathTopicImg.png');
     }
     return topicDetailsHeaderImg
   }

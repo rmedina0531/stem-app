@@ -27,43 +27,42 @@ const TopicDetailList = (props) => {
 
     let card_list = datajson[currentTopic].map((card, i) => {
         // console.log(card);
-        const currentSubject = card.topicTitle;
-        // console.log(currentSubject);
         return <View key={i} style={styles.topicContainer}>
                     <View style={styles.imgContainer}>
                     <Image 
-                        source={images.topicIcon[currentSubject]}
+                        source={images.topicIcon[card.topicTitle]}
                         style={styles.topicIcon}
                     />
                     </View>
                     <View style={styles.textContainer}>
-                        <Text style={styles.topicTitle}>{currentSubject}</Text>
+                        <Text style={styles.topicTitle}>{card.topicTitle}</Text>
                         <Text style={styles.topicIntro}>{card.topicIntro}</Text>
                         <TouchableOpacity onPress={() => {
-                            setModalVisible(!modalVisible)
+                            // setModalVisible(!modalVisible)
+                            <Modal
+                            animationType={'slide'}
+                            transparent={false}
+                            visible={setModalVisible(!modalVisible)}
+                            onRequestClose={() => {
+                                console.log('Modal has been closed.');
+                            }}>
+                            <SafeAreaView>
+                                <Button
+                                    title="Click me"
+                                    color = "red"
+                                    onPress={() => {
+                                    setModalVisible(!modalVisible);
+                                    console.log(i, card[i] + '2nd console')
+                                }}/>
+                                        {/* {open_Modal} */}
+                                <Text></Text>
+                        </SafeAreaView> 
+                    </Modal>
+                            console.log(i, card[i])
                         }}>
                             <Text style={styles.topicLink}>Learn More</Text>
                         </TouchableOpacity>
                     </View>
-                    <Modal
-                        animationType={'slide'}
-                        transparent={false}
-                        visible={modalVisible}
-                        onRequestClose={() => {
-                            console.log('Modal has been closed.');
-                        }}>
-                        <SafeAreaView>
-                            <Button
-                                title="Click me"
-                                color = "red"
-                                onPress={() => {
-                                setModalVisible(!modalVisible);
-                            }}/>
-                                    {/* {open_Modal} */}
-                            <Text>{currentSubject}</Text>
-                            {console.log(currentSubject)}
-                        </SafeAreaView> 
-                    </Modal>
                 </View>
     });
 
