@@ -1,179 +1,178 @@
 {
-    "Science": [
-      {
-        "topicIcon": "../assets/bio.png",
-        "topicTitle": "Biology",
-        "topicIntro": "The study of Life and Anatomy.",
-        "topicDescription": "asdfghjkl",
-        "resources": "asdfghjk"
-      },
-      {
-        "topicIcon": "../assets/chem.png",
-        "topicTitle": "Chemistry",
-        "topicIntro": "The study of elements and chemicals reactions.",
-        "topicDescription": "some descriptions for later",
-        "resources": "asdfghjk"
-      },
-      {
-        "topicIcon": "../assets/animal.png",
-        "topicTitle": "Animal",
-        "topicIntro": "The study of elements and chemicals reactions.",
-        "topicDescription": "something random",
-        "resources": "asdfghjk"
-      },
-      {
-        "topicIcon": "../assets/stars.png",
-        "topicTitle": "Astronomy",
-        "topicIntro": "The study of stars,planets and galaxies.",
-        "topicDescription": "just testing",
-        "resources": "asdfghjk"
-      },
-      {
-        "topicIcon": "../assets/physics.png",
-        "topicTitle": "Physics",
-        "topicIntro": "The study of gravity and movement.",
-        "topicDescription": "asdfghjkl",
-        "resources": "asdfghjk"
-      },
-      {
-        "topicIcon": "../assets/elec.png",
-        "topicTitle": "Electricity",
-        "topicIntro": "The study of weather and electricity.",
-        "topicDescription": "asdfghjkl",
-        "resources": "asdfghjk"
-      }
-    ],
-    "Technology": [
-      {
-        "topicIcon": "../assets/physics.png",
-        "topicTitle": "Computer Science",
-        "topicIntro": "The study of gravity and movement.",
-        "topicDescription": "asdfghjkl",
-        "resources": "asdfghjk"
-      },
-      {
-        "topicIcon": "../assets/physics.png",
-        "topicTitle": "Game Development",
-        "topicIntro": "The study of gravity and movement.",
-        "topicDescription": "asdfghjkl",
-        "resources": "asdfghjk"
-      },
-      {
-        "topicIcon": "../assets/physics.png",
-        "topicTitle": "Cybersecurity",
-        "topicIntro": "The study of gravity and movement.",
-        "topicDescription": "asdfghjkl",
-        "resources": "asdfghjk"
-      },
-      {
-        "topicIcon": "../assets/physics.png",
-        "topicTitle": "Data Analysis",
-        "topicIntro": "The study of gravity and movement.",
-        "topicDescription": "asdfghjkl",
-        "resources": "asdfghjk"
-      },
-      {
-        "topicIcon": "../assets/physics.png",
-        "topicTitle": "AI",
-        "topicIntro": "The study of gravity and movement.",
-        "topicDescription": "asdfghjkl",
-        "resources": "asdfghjk"
-      },
-      {
-        "topicIcon": "../assets/physics.png",
-        "topicTitle": "Machine Learning",
-        "topicIntro": "The study of gravity and movement.",
-        "topicDescription": "asdfghjkl",
-        "resources": "asdfghjk"
-      }
-    ],
-    "Engineering": [
-      {
-        "topicIcon": "../assets/physics.png",
-        "topicTitle": "Electrical",
-        "topicIntro": "The study of gravity and movement.",
-        "topicDescription": "asdfghjkl",
-        "resources": "asdfghjk"
-      },
-      {
-        "topicIcon": "../assets/physics.png",
-        "topicTitle": "Mechanical",
-        "topicIntro": "The study of gravity and movement.",
-        "topicDescription": "asdfghjkl",
-        "resources": "asdfghjk"
-      },
-      {
-        "topicIcon": "../assets/physics.png",
-        "topicTitle": "Robotics",
-        "topicIntro": "The study of gravity and movement.",
-        "topicDescription": "asdfghjkl",
-        "resources": "asdfghjk"
-      },
-      {
-        "topicIcon": "../assets/physics.png",
-        "topicTitle": "Civil",
-        "topicIntro": "The study of gravity and movement.",
-        "topicDescription": "asdfghjkl",
-        "resources": "asdfghjk"
-      },
-      {
-        "topicIcon": "../assets/physics.png",
-        "topicTitle": "Computer",
-        "topicIntro": "The study of gravity and movement.",
-        "topicDescription": "asdfghjkl",
-        "resources": "asdfghjk"
-      },
-      {
-        "topicIcon": "../assets/physics.png",
-        "topicTitle": "Industrial",
-        "topicIntro": "The study of gravity and movement.",
-        "topicDescription": "asdfghjkl",
-        "resources": "asdfghjk"
-      }
-    ],
-    "Math": [
-      {
-        "topicIcon": "../assets/stats.png",
-        "topicTitle": "Data & Statistics",
-        "topicIntro": "The study of gravity and movement.",
-        "topicDescription": "asdfghjkl",
-        "resources": "asdfghjk"
-      },
-      {
-        "topicIcon": "../assets/calc.png",
-        "topicTitle": "Calculus",
-        "topicIntro": "The study of gravity and movement.",
-        "topicDescription": "asdfghjkl",
-        "resources": "asdfghjk"
-      },
-      {
-        "topicIcon": "../assets/geo.png",
-        "topicTitle": "Geometry",
-        "topicIntro": "The study of gravity and movement.",
-        "topicDescription": "asdfghjkl",
-        "resources": "asdfghjk"
-      },
-      {
-        "topicIcon": "../assets/gametheory.png",
-        "topicTitle": "Game Theory",
-        "topicIntro": "The study of gravity and movement.",
-        "topicDescription": "asdfghjkl",
-        "resources": "asdfghjk"
-      },
-      {
-        "topicIcon": "../assets/graph.png",
-        "topicTitle": "Graph Theory",
-        "topicIntro": "The study of gravity and movement.",
-        "topicDescription": "asdfghjkl",
-        "resources": "asdfghjk"
-      },
-      {
-        "topicIcon": "../assets/prob.png",
-        "topicTitle": "Probability",
-        "topicIntro": "The study of gravity and movement.",
-        "topicDescription": "asdfghjkl",
-        "resources": "asdfghjk"
-      }
-    ]
-  }
-  
+  "Science": [
+    {
+      "topicIcon": "../assets/bio.png",
+      "topicTitle": "Biology",
+      "topicIntro": "The study of Life and Anatomy.",
+      "topicDescription": "asdfghjkl",
+      "resources": "asdfghjk"
+    },
+    {
+      "topicIcon": "../assets/chem.png",
+      "topicTitle": "Chemistry",
+      "topicIntro": "The study of elements and chemicals reactions.",
+      "topicDescription": "some descriptions for later",
+      "resources": "asdfghjk"
+    },
+    {
+      "topicIcon": "../assets/animal.png",
+      "topicTitle": "Animal",
+      "topicIntro": "The study of elements and chemicals reactions.",
+      "topicDescription": "something random",
+      "resources": "asdfghjk"
+    },
+    {
+      "topicIcon": "../assets/stars.png",
+      "topicTitle": "Astronomy",
+      "topicIntro": "The study of stars,planets and galaxies.",
+      "topicDescription": "just testing",
+      "resources": "asdfghjk"
+    },
+    {
+      "topicIcon": "../assets/physics.png",
+      "topicTitle": "Physics",
+      "topicIntro": "The study of gravity and movement.",
+      "topicDescription": "asdfghjkl",
+      "resources": "asdfghjk"
+    },
+    {
+      "topicIcon": "../assets/elec.png",
+      "topicTitle": "Electricity",
+      "topicIntro": "The study of weather and electricity.",
+      "topicDescription": "asdfghjkl",
+      "resources": "asdfghjk"
+    }
+  ],
+  "Technology": [
+    {
+      "topicIcon": "../assets/physics.png",
+      "topicTitle": "Computer Science",
+      "topicIntro": "The study of gravity and movement.",
+      "topicDescription": "asdfghjkl",
+      "resources": "asdfghjk"
+    },
+    {
+      "topicIcon": "../assets/physics.png",
+      "topicTitle": "Game Development",
+      "topicIntro": "The study of gravity and movement.",
+      "topicDescription": "asdfghjkl",
+      "resources": "asdfghjk"
+    },
+    {
+      "topicIcon": "../assets/physics.png",
+      "topicTitle": "Cybersecurity",
+      "topicIntro": "The study of gravity and movement.",
+      "topicDescription": "asdfghjkl",
+      "resources": "asdfghjk"
+    },
+    {
+      "topicIcon": "../assets/physics.png",
+      "topicTitle": "Data Analysis",
+      "topicIntro": "The study of gravity and movement.",
+      "topicDescription": "asdfghjkl",
+      "resources": "asdfghjk"
+    },
+    {
+      "topicIcon": "../assets/physics.png",
+      "topicTitle": "AI",
+      "topicIntro": "The study of gravity and movement.",
+      "topicDescription": "asdfghjkl",
+      "resources": "asdfghjk"
+    },
+    {
+      "topicIcon": "../assets/physics.png",
+      "topicTitle": "Machine Learning",
+      "topicIntro": "The study of gravity and movement.",
+      "topicDescription": "asdfghjkl",
+      "resources": "asdfghjk"
+    }
+  ],
+  "Engineering": [
+    {
+      "topicIcon": "../assets/physics.png",
+      "topicTitle": "Electrical",
+      "topicIntro": "The study of gravity and movement.",
+      "topicDescription": "asdfghjkl",
+      "resources": "asdfghjk"
+    },
+    {
+      "topicIcon": "../assets/physics.png",
+      "topicTitle": "Mechanical",
+      "topicIntro": "The study of gravity and movement.",
+      "topicDescription": "asdfghjkl",
+      "resources": "asdfghjk"
+    },
+    {
+      "topicIcon": "../assets/physics.png",
+      "topicTitle": "Robotics",
+      "topicIntro": "The study of gravity and movement.",
+      "topicDescription": "asdfghjkl",
+      "resources": "asdfghjk"
+    },
+    {
+      "topicIcon": "../assets/physics.png",
+      "topicTitle": "Civil",
+      "topicIntro": "The study of gravity and movement.",
+      "topicDescription": "asdfghjkl",
+      "resources": "asdfghjk"
+    },
+    {
+      "topicIcon": "../assets/physics.png",
+      "topicTitle": "Computer",
+      "topicIntro": "The study of gravity and movement.",
+      "topicDescription": "asdfghjkl",
+      "resources": "asdfghjk"
+    },
+    {
+      "topicIcon": "../assets/physics.png",
+      "topicTitle": "Industrial",
+      "topicIntro": "The study of gravity and movement.",
+      "topicDescription": "asdfghjkl",
+      "resources": "asdfghjk"
+    }
+  ],
+  "Math": [
+    {
+      "topicIcon": "../assets/stats.png",
+      "topicTitle": "Data & Statistics",
+      "topicIntro": "The study of gravity and movement.",
+      "topicDescription": "asdfghjkl",
+      "resources": "asdfghjk"
+    },
+    {
+      "topicIcon": "../assets/calc.png",
+      "topicTitle": "Calculus",
+      "topicIntro": "The study of gravity and movement.",
+      "topicDescription": "asdfghjkl",
+      "resources": "asdfghjk"
+    },
+    {
+      "topicIcon": "../assets/geo.png",
+      "topicTitle": "Geometry",
+      "topicIntro": "The study of gravity and movement.",
+      "topicDescription": "asdfghjkl",
+      "resources": "asdfghjk"
+    },
+    {
+      "topicIcon": "../assets/gametheory.png",
+      "topicTitle": "Game Theory",
+      "topicIntro": "The study of gravity and movement.",
+      "topicDescription": "asdfghjkl",
+      "resources": "asdfghjk"
+    },
+    {
+      "topicIcon": "../assets/graph.png",
+      "topicTitle": "Graph Theory",
+      "topicIntro": "The study of gravity and movement.",
+      "topicDescription": "asdfghjkl",
+      "resources": "asdfghjk"
+    },
+    {
+      "topicIcon": "../assets/prob.png",
+      "topicTitle": "Probability",
+      "topicIntro": "The study of gravity and movement.",
+      "topicDescription": "asdfghjkl",
+      "resources": "asdfghjk"
+    }
+  ]
+}

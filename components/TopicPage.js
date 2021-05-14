@@ -3,8 +3,6 @@ import { StyleSheet, View, Text, Modal } from "react-native";
 import Button from "./Button";
 
 import Quiz from "../components/Quiz";
-import TopicDetailsHeader from "./TopicDetailsHeader";
-import TopicDetailList from "./TopicDetailList";
 import TopicDetails from "./TopicDetails";
 
 const TopicPage = (props) => {
@@ -15,22 +13,21 @@ const TopicPage = (props) => {
   const [topicDetailsOpen, setTopicDetailsOpen] = useState(false);
   const closeTopicDetails = () => setTopicDetailsOpen(false);
 
-
   currentTopic = (title) => {
-    let topicDetailsHeaderImg = require('../assets/scienceTopicImg.png');
+    let topicDetailsHeaderImg = require("../assets/scienceTopicImg.png");
 
-    if(title == 'Science'){
-      topicDetailsHeaderImg = require('../assets/scienceTopicImg.png');
-    }else if(title == 'Technology'){
-      topicDetailsHeaderImg = require('../assets/techTopicImg.png');
-    }else if(title == 'Engineering'){
-      topicDetailsHeaderImg = require('../assets/engineeringTopicImg.png');
-    }else if(title == 'Math'){
-      topicDetailsHeaderImg = require('../assets/mathTopicImg.png');
+    if (title == "Science") {
+      topicDetailsHeaderImg = require("../assets/scienceTopicImg.png");
+    } else if (title == "Technology") {
+      topicDetailsHeaderImg = require("../assets/techTopicImg.png");
+    } else if (title == "Engineering") {
+      topicDetailsHeaderImg = require("../assets/engineeringTopicImg.png");
+    } else if (title == "Math") {
+      topicDetailsHeaderImg = require("../assets/mathTopicImg.png");
     }
-    return topicDetailsHeaderImg
-  }
-  
+    return topicDetailsHeaderImg;
+  };
+
   async function storiesHandler() {
     let key = "?apiKey=7ff285bdf33b42a083f63887f5b59503";
     let url = "https://newsapi.org/v2/everything" + key;
@@ -65,11 +62,11 @@ const TopicPage = (props) => {
 
       {/* Topic Details */}
       <Modal visible={topicDetailsOpen} animationType="slide">
-        <TopicDetails 
-          topic = {props.title}
-          exit= {closeTopicDetails}
-          color = {props.textColor}
-          headImg = {currentTopic(props.title)}
+        <TopicDetails
+          topic={props.title}
+          exit={closeTopicDetails}
+          color={props.textColor}
+          headImg={currentTopic(props.title)}
         />
       </Modal>
 
@@ -94,8 +91,7 @@ const TopicPage = (props) => {
             text={props.title + " Topics"}
             style={styles.buttonStyle}
             textColor={props.textColor}
-            onPress={() => 
-            setTopicDetailsOpen(true)}   
+            onPress={() => setTopicDetailsOpen(true)}
           />
 
           <Button
