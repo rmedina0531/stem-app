@@ -7,6 +7,8 @@ import TopicDetailsHeader from "./TopicDetailsHeader";
 import TopicDetailList from "./TopicDetailList";
 import TopicDetails from "./TopicDetails";
 
+import JobsDetails from "./JobsDetails.js"
+
 const TopicPage = (props) => {
   const { navigation } = props;
   const [quizOpen, setQuizOpen] = useState(false);
@@ -15,8 +17,10 @@ const TopicPage = (props) => {
   const [topicDetailsOpen, setTopicDetailsOpen] = useState(false);
   const closeTopicDetails = () => setTopicDetailsOpen(false);
 
+  const [jobsDetailsOpen, setJobsDetailsOpen] = useState(false);
+  const closeJobsDetails = () => setJobsDetailsOpen(false);
 
-  currentTopic = (title) => {
+const  currentTopic = (title) => {
     let topicDetailsHeaderImg = require('../assets/scienceTopicImg.png');
 
     if(title == 'Science'){
@@ -70,6 +74,14 @@ const TopicPage = (props) => {
           exit= {closeTopicDetails}
           color = {props.textColor}
           headImg = {currentTopic(props.title)}
+        />
+      </Modal>
+
+      {/* Grow up modal */}
+      <Modal visible = {jobsDetailsOpen} animationType = "slide">
+        <JobsDetails
+          topic = {props.title}
+          exit ={closeJobsDetails}
         />
       </Modal>
 
