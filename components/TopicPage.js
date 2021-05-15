@@ -5,6 +5,8 @@ import Button from "./Button";
 import Quiz from "../components/Quiz";
 import TopicDetails from "./TopicDetails";
 
+import JobsDetails from "./JobsDetails.js";
+
 const TopicPage = (props) => {
   const { navigation } = props;
   const [quizOpen, setQuizOpen] = useState(false);
@@ -13,7 +15,10 @@ const TopicPage = (props) => {
   const [topicDetailsOpen, setTopicDetailsOpen] = useState(false);
   const closeTopicDetails = () => setTopicDetailsOpen(false);
 
-  currentTopic = (title) => {
+  const [jobsDetailsOpen, setJobsDetailsOpen] = useState(false);
+  const closeJobsDetails = () => setJobsDetailsOpen(false);
+
+  const currentTopic = (title) => {
     let topicDetailsHeaderImg = require("../assets/scienceTopicImg.png");
 
     if (title == "Science") {
@@ -70,6 +75,11 @@ const TopicPage = (props) => {
         />
       </Modal>
 
+      {/* Grow up modal */}
+      <Modal visible={jobsDetailsOpen} animationType="slide">
+        <JobsDetails topic={props.title} exit={closeJobsDetails} />
+      </Modal>
+
       <Text style={[styles.title, { color: props.textColor }]}>
         {props.title}
       </Text>
@@ -112,6 +122,7 @@ const TopicPage = (props) => {
             text="When I grow up!"
             style={styles.buttonStyle}
             textColor={props.textColor}
+            onPress={() => setJobsDetailsOpen(true)}
           />
           <Button
             text="Quiz Me!"

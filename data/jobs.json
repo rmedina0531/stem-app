@@ -1,0 +1,31 @@
+{
+    "Science":[
+        {
+            "jobName": "Anthropologist",
+            "link": "https://money.usnews.com/careers/best-jobs/rankings/best-science-jobs"
+        }
+    ],
+
+    "Technology":[
+        {
+            "jobName": "Software Developer",
+            "link": "https://money.usnews.com/careers/best-jobs/rankings/best-technology-jobs"
+        }
+    ],
+
+    "Engineering": [
+        {
+            "jobName": "Aerospace Engineer",
+            "link": "https://educatingengineers.com/career-specialties"
+        }
+
+    ],
+
+    "Math":[
+        {
+            "jobName": "Auditor",
+            "link": "https://www.northeastern.edu/graduate/blog/best-math-careers/"
+        }
+
+    ]
+}
