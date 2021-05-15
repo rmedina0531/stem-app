@@ -7,7 +7,7 @@ import TopicDetailsHeader from "./TopicDetailsHeader";
 import TopicDetailList from "./TopicDetailList";
 import TopicDetails from "./TopicDetails";
 
-import JobsDetails from "./JobsDetails.js"
+import JobsDetails from "./JobsDetails.js";
 
 const TopicPage = (props) => {
   const { navigation } = props;
@@ -20,21 +20,21 @@ const TopicPage = (props) => {
   const [jobsDetailsOpen, setJobsDetailsOpen] = useState(false);
   const closeJobsDetails = () => setJobsDetailsOpen(false);
 
-const  currentTopic = (title) => {
-    let topicDetailsHeaderImg = require('../assets/scienceTopicImg.png');
+  const currentTopic = (title) => {
+    let topicDetailsHeaderImg = require("../assets/scienceTopicImg.png");
 
-    if(title == 'Science'){
-      topicDetailsHeaderImg = require('../assets/scienceTopicImg.png');
-    }else if(title == 'Technology'){
-      topicDetailsHeaderImg = require('../assets/techTopicImg.png');
-    }else if(title == 'Engineering'){
-      topicDetailsHeaderImg = require('../assets/engineeringTopicImg.png');
-    }else if(title == 'Math'){
-      topicDetailsHeaderImg = require('../assets/mathTopicImg.png');
+    if (title == "Science") {
+      topicDetailsHeaderImg = require("../assets/scienceTopicImg.png");
+    } else if (title == "Technology") {
+      topicDetailsHeaderImg = require("../assets/techTopicImg.png");
+    } else if (title == "Engineering") {
+      topicDetailsHeaderImg = require("../assets/engineeringTopicImg.png");
+    } else if (title == "Math") {
+      topicDetailsHeaderImg = require("../assets/mathTopicImg.png");
     }
-    return topicDetailsHeaderImg
-  }
-  
+    return topicDetailsHeaderImg;
+  };
+
   async function storiesHandler() {
     let key = "?apiKey=7ff285bdf33b42a083f63887f5b59503";
     let url = "https://newsapi.org/v2/everything" + key;
@@ -69,20 +69,17 @@ const  currentTopic = (title) => {
 
       {/* Topic Details */}
       <Modal visible={topicDetailsOpen} animationType="slide">
-        <TopicDetails 
-          topic = {props.title}
-          exit= {closeTopicDetails}
-          color = {props.textColor}
-          headImg = {currentTopic(props.title)}
+        <TopicDetails
+          topic={props.title}
+          exit={closeTopicDetails}
+          color={props.textColor}
+          headImg={currentTopic(props.title)}
         />
       </Modal>
 
       {/* Grow up modal */}
-      <Modal visible = {jobsDetailsOpen} animationType = "slide">
-        <JobsDetails
-          topic = {props.title}
-          exit ={closeJobsDetails}
-        />
+      <Modal visible={jobsDetailsOpen} animationType="slide">
+        <JobsDetails topic={props.title} exit={closeJobsDetails} />
       </Modal>
 
       <Text style={[styles.title, { color: props.textColor }]}>
@@ -106,8 +103,7 @@ const  currentTopic = (title) => {
             text={props.title + " Topics"}
             style={styles.buttonStyle}
             textColor={props.textColor}
-            onPress={() => 
-            setTopicDetailsOpen(true)}   
+            onPress={() => setTopicDetailsOpen(true)}
           />
 
           <Button
@@ -128,6 +124,7 @@ const  currentTopic = (title) => {
             text="When I grow up!"
             style={styles.buttonStyle}
             textColor={props.textColor}
+            onPress={() => setJobsDetailsOpen(true)}
           />
           <Button
             text="Quiz Me!"
