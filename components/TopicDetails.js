@@ -52,7 +52,7 @@ const DetailEntry = (props) => {
                 </View>
                 </ScrollView>
                 <View style={{justifyContent: 'center', alignItems: 'center', height: 100, width: '100%'}}>
-                    <TouchableOpacity style={{backgroundColor: props.maincolor, width:'40%', borderRadius: '40px', justifyContent: 'center', alignItems: 'center'}}
+                    <TouchableOpacity style={{backgroundColor: props.maincolor, width:'40%', borderRadius: 40, justifyContent: 'center', alignItems: 'center'}}
                         onPress={() => {
                             setModalVisible(!modalVisible);
                         }}
