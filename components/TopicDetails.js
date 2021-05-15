@@ -11,75 +11,128 @@ import {
   Button,
 } from "react-native";
 import { Image } from "react-native-elements";
-import images from '../assets/images';
+import images from "../assets/images";
 import TopicDetailsHeader from "./TopicDetailsHeader";
 import { FlatList } from "react-native-gesture-handler";
-import { Linking } from 'react-native';
+import { Linking } from "react-native";
 
 const DetailEntry = (props) => {
   let [modalVisible, setModalVisible] = useState(false);
   let item = props.data;
   return (
     <View style={styles.topicContainer}>
-     
       {/* more info modal --------------------------------- */}
-      <Modal
-        animationType={"slide"}
-        transparent={false}
-        visible={modalVisible}
-        >
-        <SafeAreaView style={{ backgroundColor: props.maincolor}}>
-        <View style={styles.infoContainer}>
+      <Modal animationType={"slide"} transparent={false} visible={modalVisible}>
+        <SafeAreaView style={{ backgroundColor: props.maincolor }}>
+          <View style={styles.infoContainer}>
             <View style={styles.textInfoContainer}>
-                <View  style={styles.moreInfoHeader}>
-                    <Image 
-                        source={images.topicIcon[item.topicTitle]} 
-                        style={styles.topicIcon} 
-                    />
-                    <Text style={{ fontSize: 40, marginTop: 25, marginBottom: 10, fontWeight:'bold', color: '#595959'}} >{item.topicTitle}</Text>
-                    <View style = {styles.lineStyle} />
+              <View style={styles.moreInfoHeader}>
+                <Image
+                  source={images.topicIcon[item.topicTitle]}
+                  style={styles.topicIcon}
+                />
+                <Text
+                  style={{
+                    fontSize: 40,
+                    marginTop: 25,
+                    marginBottom: 10,
+                    fontWeight: "bold",
+                    color: "#595959",
+                  }}
+                >
+                  {item.topicTitle}
+                </Text>
+                <View style={styles.lineStyle} />
+              </View>
+              <ScrollView>
+                <View style={styles.moreInfoText}>
+                  <Text
+                    style={{
+                      fontSize: 25,
+                      textAlign: "center",
+                      margin: 10,
+                      color: "#595959",
+                      fontWeight: "bold",
+                    }}
+                  >
+                    What is {item.topicTitle}?
+                  </Text>
+                  <Text
+                    style={{
+                      fontSize: 20,
+                      textAlign: "center",
+                      marginTop: 10,
+                      marginBottom: 10,
+                      marginLeft: 25,
+                      marginRight: 25,
+                      lineHeight: 35,
+                    }}
+                  >
+                    {item.topicDescription}
+                  </Text>
+                  <Text
+                    style={{
+                      fontSize: 25,
+                      textAlign: "center",
+                      margin: 10,
+                      color: "#595959",
+                      fontWeight: "bold",
+                    }}
+                  >
+                    Watch a Video!
+                  </Text>
+                  <Text
+                    style={{ color: "blue", fontSize: 20, margin: 10 }}
+                    onPress={() => Linking.openURL(item.resources)}
+                  >
+                    Video on {item.topicTitle}
+                  </Text>
                 </View>
-                <ScrollView>
-                <View  style={styles.moreInfoText}>
-                    <Text style={{ fontSize: 25, textAlign: 'center', margin: 10, color: '#595959', fontWeight:'bold'}}>What is {item.topicTitle}?</Text>
-                    <Text style={{ fontSize: 20, textAlign: 'center', marginTop: 10, marginBottom: 10, marginLeft:25, marginRight: 25,lineHeight: 35}} >{item.topicDescription}</Text>
-                    <Text style={{ fontSize: 25, textAlign: 'center', margin: 10, color: '#595959', fontWeight:'bold'}}>Watch a Video!</Text>
-                    <Text style={{color: 'blue', fontSize: 20, margin: 10}}
-                        onPress={() => Linking.openURL(item.resources)}>
-                        Video on {item.topicTitle}
-                    </Text>
-
-                </View>
-                </ScrollView>
-                <View style={{justifyContent: 'center', alignItems: 'center', height: 100, width: '100%'}}>
-                    <TouchableOpacity style={{backgroundColor: props.maincolor, width:'40%', borderRadius: '40px', justifyContent: 'center', alignItems: 'center'}}
-                        onPress={() => {
-                            setModalVisible(!modalVisible);
-                        }}
-                    >
-                        <Button
-                            style={{
-                                height: 20,
-                                width: 20}}
-                                title="Close"
-                                color="white"
-                                onPress={() => {
-                            setModalVisible(!modalVisible);
-                        }}
-                        />
-                    </TouchableOpacity>
-                </View>
+              </ScrollView>
+              <View
+                style={{
+                  justifyContent: "center",
+                  alignItems: "center",
+                  height: 100,
+                  width: "100%",
+                }}
+              >
+                <TouchableOpacity
+                  style={{
+                    backgroundColor: props.maincolor,
+                    width: "40%",
+                    borderRadius: 40,
+                    justifyContent: "center",
+                    alignItems: "center",
+                  }}
+                  onPress={() => {
+                    setModalVisible(!modalVisible);
+                  }}
+                >
+                  <Button
+                    style={{
+                      height: 20,
+                      width: 20,
+                    }}
+                    title="Close"
+                    color="white"
+                    onPress={() => {
+                      setModalVisible(!modalVisible);
+                    }}
+                  />
+                </TouchableOpacity>
+              </View>
             </View>
-        </View>
+          </View>
         </SafeAreaView>
       </Modal>
 
       {/* Topic Cards ------------------------------------------- */}
       {/* icon */}
       <View style={styles.imgContainer}>
-        <Image 
-            source={images.topicIcon[item.topicTitle]} 
-            style={styles.topicIcon} 
+        <Image
+          source={images.topicIcon[item.topicTitle]}
+          style={styles.topicIcon}
         />
       </View>
       {/* text */}
@@ -87,12 +140,14 @@ const DetailEntry = (props) => {
         <Text style={styles.topicTitle}>{item.topicTitle}</Text>
         <Text style={styles.topicIntro}>{item.topicIntro}</Text>
         <TouchableOpacity
-            onPress={() => {
+          onPress={() => {
             setModalVisible(!modalVisible);
-            }}
+          }}
         >
-        <Text style={{color: props.maincolor,fontSize: 15 }}>Learn More</Text>
-      </TouchableOpacity>
+          <Text style={{ color: props.maincolor, fontSize: 15 }}>
+            Learn More
+          </Text>
+        </TouchableOpacity>
       </View>
     </View>
   );
@@ -100,7 +155,13 @@ const DetailEntry = (props) => {
 
 const TopicDetails = (props) => {
   const renderItem = ({ item }) => {
-    return <DetailEntry data={item} topicTitle={props.topic} maincolor={props.color}/>;
+    return (
+      <DetailEntry
+        data={item}
+        topicTitle={props.topic}
+        maincolor={props.color}
+      />
+    );
   };
 
   const dataList = require("../data/topicDetails.json")[props.topic];
@@ -137,9 +198,9 @@ const styles = StyleSheet.create({
     // backgroundColor: 'yellow',
     width: "100%",
   },
-//   moreInfoContainer: {
-//       backgroundColor: 'blue'
-//   },
+  //   moreInfoContainer: {
+  //       backgroundColor: 'blue'
+  //   },
   topicContainer: {
     backgroundColor: "#f0f0f0",
     flexDirection: "row",
@@ -177,34 +238,28 @@ const styles = StyleSheet.create({
     flex: 0.5,
   },
   textInfoContainer: {
-    backgroundColor: '#f0f0f0',
-    height: '95%',
+    backgroundColor: "#f0f0f0",
+    height: "95%",
     margin: 20,
     borderRadius: 15,
-   
   },
   infoContainer: {
     // backgroundColor: 'blue'
-
   },
   moreInfoHeader: {
-    alignItems: 'center',
-    justifyContent: 'center',
-    paddingTop: 40
+    alignItems: "center",
+    justifyContent: "center",
+    paddingTop: 40,
   },
   moreInfoText: {
-      alignItems: 'center',
-      justifyContent: 'center',
+    alignItems: "center",
+    justifyContent: "center",
   },
-  lineStyle:{
+  lineStyle: {
     borderWidth: 1,
     width: 250,
-    borderColor:'#d1cfcf',
-    margin:10,
-    borderRadius: 30
-
+    borderColor: "#d1cfcf",
+    margin: 10,
+    borderRadius: 30,
   },
- 
- 
-
 });
