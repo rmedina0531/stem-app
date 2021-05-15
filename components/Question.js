@@ -23,7 +23,7 @@ const Question = (props) => {
       console.log(currentQuestion);
     } else {
       // console.log("flag trigger");
-      props.prevScoreHandler(score);
+      // props.prevScoreHandler(score);
       setResultFlag(true);
     }
     setSelected(null);

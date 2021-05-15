@@ -1,10 +1,11 @@
 import React from "react";
-import { StyleSheet, Text, TouchableOpacity } from "react-native";
+import { StyleSheet, Text, TouchableOpacity,View } from "react-native";
 // import { TouchableOpacity } from "react-native-gesture-handler";
 
 const Button = (props) => {
   // console.log(props.color);
   return (
+    <View style={styles.buttonStyle}>
     <TouchableOpacity
       style={
         props.style
@@ -23,6 +24,7 @@ const Button = (props) => {
         {props.text}
       </Text>
     </TouchableOpacity>
+    </View>
   );
 };
 
@@ -37,7 +39,10 @@ const styles = StyleSheet.create({
   },
   text: {
     color: "#ffffff",
-    fontSize: 20,
+    fontSize: 25,
+    fontWeight: 'bold',
+    textAlign: 'center'
+    // padding: 10
   },
 });
 
