@@ -10,10 +10,7 @@ import {
 import Button from "./Button";
 import Question from "./Question";
 
-import {connect} from 'react-redux'
-
-
-// import quiz from "./otherquiz.json";
+import { connect } from "react-redux";
 const Quiz = (props) => {
   const datajson = require("../data/quiz.json");
   const questions = datajson[props.title];
@@ -21,19 +18,19 @@ const Quiz = (props) => {
   const [score, setScore] = useState(0);
   const [questionOpen, setQuestionOpen] = useState(false);
 
-  //   const startQuizHandler = () => {};
   return (
     <View>
       {/* display questions */}
       <Modal visible={questionOpen} animationType="slide">
         <Question
           json={questions}
+          title={props.title}
           scoreHandler={setScore}
           closeHandler={setQuestionOpen}
         />
       </Modal>
       <Text style={styles.title}>{props.title} Quiz</Text>
-      <Text>High Score: {props.data[props.title].maxScore}</Text>
+      <Text>High Score: {props.quizData[props.title].maxScore}</Text>
       <Button
         text="Start Quiz"
         onPress={() => setQuestionOpen(true)}
@@ -47,17 +44,17 @@ const Quiz = (props) => {
 // export default Quiz;
 export default connect(mapStateToProps, mapDispatchToProps)(Quiz);
 
-function mapDispatchToProps(dispatch){
+function mapDispatchToProps(dispatch) {
   return {
-    setMaxScore : (quizName) => dispatch({type:'SET_MAX_SCORE', quizName:quizName}),
-  }
+    setMaxScore: (quizName) =>
+      dispatch({ type: "SET_MAX_SCORE", quizName: quizName }),
+  };
 }
 
-function mapStateToProps (state){
-  console.log(state + "eddqewewrqewr")
+function mapStateToProps(state) {
   return {
-    quizData: state.quizData
-  }
+    quizData: state.quizData,
+  };
 }
 
 const styles = StyleSheet.create({

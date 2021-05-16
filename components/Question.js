@@ -3,6 +3,8 @@ import React, { useState } from "react";
 import { Text, View, StyleSheet } from "react-native";
 import Button from "./Button";
 
+import { connect } from "react-redux";
+
 const Question = (props) => {
   const questionList = props.json;
   let [currentQuestion, setCurrentQuestion] = useState(0);
@@ -20,9 +22,10 @@ const Question = (props) => {
     if (currentQuestion + 1 < questionList.length) {
       currentQuestion = currentQuestion + 1;
       setCurrentQuestion(currentQuestion);
-      console.log(currentQuestion);
     } else {
-      // console.log("flag trigger");
+      if (score > props.quizData[props.title].maxScore) {
+        props.setMaxScore(props.title, score);
+      }
       // props.prevScoreHandler(score);
       setResultFlag(true);
     }
@@ -120,7 +123,22 @@ const Question = (props) => {
   }
 };
 
-export default Question;
+// export default Question;
+
+export default connect(mapStateToProps, mapDispatchToProps)(Question);
+
+function mapDispatchToProps(dispatch) {
+  return {
+    setMaxScore: (quizName, score) =>
+      dispatch({ type: "SET_MAX_SCORE", quizName: quizName, score: score }),
+  };
+}
+
+function mapStateToProps(state) {
+  return {
+    quizData: state.quizData,
+  };
+}
 
 const styles = StyleSheet.create({
   buttonContainer: {
