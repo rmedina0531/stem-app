@@ -11,22 +11,63 @@ import Technology from "./pages/Technology";
 import Engineering from "./pages/Engineering";
 import MathPage from "./pages/MathPage";
 import Stories from "./pages/Stories";
+import {createStore} from "redux"
+import { Provider } from "react-redux";
 
 const Stack = createStackNavigator();
+
+const initialState = {
+  quizData:{
+    Science:{
+      maxScore:0,
+      topicDetailsOpen:false,
+      quizOpen:false,
+      jobsDetailsOpen:false,
+    },
+    Math:{
+      maxScore:0,
+      topicDetailsOpen:false,
+      quizOpen:false,
+      jobsDetailsOpen:false,
+    },
+    Engineering:{
+      maxScore:0,
+      topicDetailsOpen:false,
+      quizOpen:false,
+      jobsDetailsOpen:false,
+    },
+    Technology:{
+      maxScore:0,
+      topicDetailsOpen:false,
+      quizOpen:false,
+      jobsDetailsOpen:false,
+    },
+  }
+}
+
+const reducer = (state=initialState, action) => {
+  switch(action.type){
+    case "SET_MAX_SCORE":
+      state[action.page].maxScore = action.score
+  }
+}
+const store = createStore(reducer)
 
 export default function App() {
   return (
     <SafeAreaProvider>
-      <NavigationContainer>
-        <Stack.Navigator>
-          <Stack.Screen name="Home" component={Home} />
-          <Stack.Screen name="Science" component={Science} />
-          <Stack.Screen name="Technology" component={Technology} />
-          <Stack.Screen name="Engineering" component={Engineering} />
-          <Stack.Screen name="Math" component={MathPage} />
-          <Stack.Screen name="Stories" component={Stories} />
-        </Stack.Navigator>
-      </NavigationContainer>
+      <Provider store={store}>
+        <NavigationContainer>
+          <Stack.Navigator>
+            <Stack.Screen name="Home" component={Home} />
+            <Stack.Screen name="Science" component={Science} />
+            <Stack.Screen name="Technology" component={Technology} />
+            <Stack.Screen name="Engineering" component={Engineering} />
+            <Stack.Screen name="Math" component={MathPage} />
+            <Stack.Screen name="Stories" component={Stories} />
+          </Stack.Navigator>
+        </NavigationContainer>
+      </Provider>
     </SafeAreaProvider>
   );
 }
