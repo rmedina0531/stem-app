@@ -15,8 +15,9 @@ const Question = (props) => {
 
   const nextHandler = () => {
     // check if question was correct and update score
+    tempScore = score + 1;
     if (selected === answer) {
-      setScore(score + 1);
+      setScore(tempScore);
     }
     // change to next question
     if (currentQuestion + 1 < questionList.length) {
@@ -24,7 +25,7 @@ const Question = (props) => {
       setCurrentQuestion(currentQuestion);
     } else {
       if (score > props.quizData[props.title].maxScore) {
-        props.setMaxScore(props.title, score);
+        props.setMaxScore(props.title, tempScore);
       }
       // props.prevScoreHandler(score);
       setResultFlag(true);
