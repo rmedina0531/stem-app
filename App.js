@@ -19,12 +19,12 @@ export default function App() {
     <SafeAreaProvider>
       <NavigationContainer>
         <Stack.Navigator>
-          <Stack.Screen name="Home" component={Home} />
-          <Stack.Screen name="Science" component={Science} />
-          <Stack.Screen name="Technology" component={Technology} />
-          <Stack.Screen name="Engineering" component={Engineering} />
-          <Stack.Screen name="Math" component={MathPage} />
-          <Stack.Screen name="Stories" component={Stories} />
+          <Stack.Screen options={{headerShown: false}} name="Home" component={Home} />
+          <Stack.Screen options={{headerShown: false}} name="Science" component={Science} />
+          <Stack.Screen options={{headerShown: false}} name="Technology" component={Technology} />
+          <Stack.Screen options={{headerShown: false}} name="Engineering" component={Engineering} />
+          <Stack.Screen options={{headerShown: false}} name="Math" component={MathPage} />
+          <Stack.Screen options={{headerShown: false}} name="Stories" component={Stories} />
         </Stack.Navigator>
       </NavigationContainer>
     </SafeAreaProvider>
