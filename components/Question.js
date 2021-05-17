@@ -15,6 +15,10 @@ const Question = (props) => {
 
   const nextHandler = () => {
     // check if question was correct and update score
+    if (!selected) {
+      return;
+    }
+
     tempScore = score + 1;
     if (selected === answer) {
       setScore(tempScore);
@@ -33,16 +37,32 @@ const Question = (props) => {
     setSelected(null);
   };
   const selectedA = () => {
-    setSelected("a");
+    if (selected === "a") {
+      setSelected(null);
+    } else {
+      setSelected("a");
+    }
   };
   const selectedB = () => {
-    setSelected("b");
+    if (selected === "b") {
+      setSelected(null);
+    } else {
+      setSelected("b");
+    }
   };
   const selectedC = () => {
-    setSelected("c");
+    if (selected === "c") {
+      setSelected(null);
+    } else {
+      setSelected("c");
+    }
   };
   const selectedD = () => {
-    setSelected("d");
+    if (selected === "d") {
+      setSelected(null);
+    } else {
+      setSelected("d");
+    }
   };
 
   if (resultFlag) {
