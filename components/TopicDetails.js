@@ -144,7 +144,9 @@ const DetailEntry = (props) => {
             setModalVisible(!modalVisible);
           }}
         >
-          <Text style={{ color: props.maincolor, fontSize: 15 }}>
+          <Text
+            style={{ color: props.maincolor, fontSize: 15, fontWeight: "bold" }}
+          >
             Learn More
           </Text>
         </TouchableOpacity>

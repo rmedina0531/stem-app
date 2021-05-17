@@ -1,5 +1,12 @@
 import React, { useState } from "react";
-import { StyleSheet, View, Text, Modal } from "react-native";
+import {
+  StyleSheet,
+  View,
+  Text,
+  Modal,
+  TouchableOpacity,
+  Image,
+} from "react-native";
 import Button from "./Button";
 
 import Quiz from "../components/Quiz";
@@ -80,9 +87,28 @@ const TopicPage = (props) => {
         <JobsDetails topic={props.title} exit={closeJobsDetails} />
       </Modal>
 
-      <Text style={[styles.title, { color: props.textColor }]}>
-        {props.title}
-      </Text>
+      <View style={styles.topicHeaderContainer}>
+        <View style={styles.backContainer}>
+          <TouchableOpacity
+            activeOpacity={0.5}
+            onPress={() => {
+              navigation.goBack();
+            }}
+          >
+            <Image
+              source={require("../assets/goBackBtn.png")}
+              style={styles.goBackBtn}
+            />
+          </TouchableOpacity>
+        </View>
+        <View style={styles.titleContainer}>
+          <Text style={[styles.title, { color: "white" }]}>
+            {" "}
+            {props.title}{" "}
+          </Text>
+        </View>
+      </View>
+
       <View
         style={{
           display: "flex",
@@ -144,12 +170,8 @@ const styles = StyleSheet.create({
   },
   title: {
     fontSize: 40,
+    fontWeight: "bold",
     textAlign: "center",
-    marginBottom: 100,
-    marginTop: 40,
-    textShadowColor: "rgba(0, 0, 0, 0.75)",
-    textShadowOffset: { width: -1, height: 1 },
-    textShadowRadius: 10,
   },
   buttonStyle: {
     backgroundColor: "#FFFFFF",
@@ -159,5 +181,10 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     alignItems: "center",
     borderRadius: 20,
+    padding: 15,
+  },
+  topicHeaderContainer: {
+    marginBottom: 100,
+    marginTop: 40,
   },
 });
