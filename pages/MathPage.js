@@ -1,6 +1,13 @@
 import React from "react";
 
-import { StyleSheet, View, Text, Image, TouchableOpacity,SafeAreaView } from "react-native";
+import {
+  StyleSheet,
+  View,
+  Text,
+  Image,
+  TouchableOpacity,
+  SafeAreaView,
+} from "react-native";
 import TopicPage from "../components/TopicPage";
 
 const MathPage = (props) => {
@@ -12,11 +19,9 @@ const MathPage = (props) => {
         textColor="#FFD200"
         navigation={navigation}
         search="Math"
+        image={require("../assets/mathJob.png")}
       />
-      <Image 
-            source={require('../assets/math.png')}
-            style={styles.img}
-          />
+      <Image source={require("../assets/math.png")} style={styles.img} />
     </SafeAreaView>
   );
 };
@@ -29,8 +34,8 @@ const styles = StyleSheet.create({
     justifyContent: "center",
   },
   img: {
-    width: '100%',
-    height: '40%'
+    width: "100%",
+    height: "40%",
   },
 });
 export default MathPage;

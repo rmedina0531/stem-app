@@ -1,6 +1,13 @@
 import React from "react";
 
-import { StyleSheet, View, Text, Image,TouchableOpacity,SafeAreaView } from "react-native";
+import {
+  StyleSheet,
+  View,
+  Text,
+  Image,
+  TouchableOpacity,
+  SafeAreaView,
+} from "react-native";
 import TopicPage from "../components/TopicPage";
 
 const Technology = (props) => {
@@ -12,11 +19,9 @@ const Technology = (props) => {
         textColor="#13D2F6"
         navigation={navigation}
         search="Tech"
+        image={require("../assets/technologyJob.png")}
       />
-      <Image 
-            source={require('../assets/tech.png')}
-            style={styles.img}
-          />
+      <Image source={require("../assets/tech.png")} style={styles.img} />
     </SafeAreaView>
   );
 };
@@ -31,7 +36,7 @@ const styles = StyleSheet.create({
     justifyContent: "center",
   },
   img: {
-    width: '100%',
-    height: '40%'
+    width: "100%",
+    height: "40%",
   },
 });

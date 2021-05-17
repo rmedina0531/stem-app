@@ -1,6 +1,13 @@
 import React from "react";
 
-import { StyleSheet, View, Text, Image, TouchableOpacity,SafeAreaView } from "react-native";
+import {
+  StyleSheet,
+  View,
+  Text,
+  Image,
+  TouchableOpacity,
+  SafeAreaView,
+} from "react-native";
 import TopicPage from "../components/TopicPage";
 
 const Engineering = (props) => {
@@ -12,11 +19,9 @@ const Engineering = (props) => {
         textColor="#EC5555"
         navigation={navigation}
         search="Engineering"
+        image={require("../assets/engineeringJob.png")}
       />
-      <Image 
-            source={require('../assets/engineer.png')}
-            style={styles.img}
-          />
+      <Image source={require("../assets/engineer.png")} style={styles.img} />
     </SafeAreaView>
   );
 };
@@ -29,8 +34,8 @@ const styles = StyleSheet.create({
     justifyContent: "center",
   },
   img: {
-    width: '100%',
-    height: '40%'
+    width: "100%",
+    height: "40%",
   },
 });
 export default Engineering;

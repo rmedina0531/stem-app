@@ -15,13 +15,21 @@ import {
 import JobsList from "./JobsList";
 
 const JobsDetails = (props) => {
-  const category = props.topic; 
+  const category = props.topic;
   const [modalVisible, setModalVisible] = useState(false);
-
+  const imgSrc = "../assets/" + category.toLowerCase() + "Job.png";
   return (
     <View style={styles.listContainer}>
       <Text style={styles.mainTitle}>{category}, When I Grow Up</Text>
-      <Image source ={require('../assets/'+category+'Job.png')} style = {{height: 150, width: 250, resizeMode : 'stretch', marginHorizontal: 30}}/>
+      <Image
+        source={props.image}
+        style={{
+          height: 150,
+          width: 250,
+          // resizeMode: "stretch",
+          // marginHorizontal: 30,
+        }}
+      />
       <JobsList category={category} />
       <Button title="close" onPress={props.exit}></Button>
     </View>

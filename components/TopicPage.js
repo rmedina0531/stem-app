@@ -84,9 +84,10 @@ const TopicPage = (props) => {
 
       {/* Grow up modal */}
       <Modal visible={jobsDetailsOpen} animationType="slide">
-        <JobsDetails 
-        topic={props.title} exit={closeJobsDetails} 
-        // jobsImg = {jobPicture(props.title)}  
+        <JobsDetails
+          topic={props.title}
+          exit={closeJobsDetails}
+          image={props.image}
         />
       </Modal>
 
