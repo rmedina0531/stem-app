@@ -13,31 +13,15 @@ import {
 } from "react-native";
 
 import JobsList from "./JobsList";
-import TopicDetailsHeader from "./TopicDetailsHeader";
 
 const JobsDetails = (props) => {
-  const category = props.topic;
+  const category = props.topic; 
   const [modalVisible, setModalVisible] = useState(false);
 
   return (
     <View style={styles.listContainer}>
-      {/* <Modal animationType={"slide"} transparent={false} visible={modalVisible}>
-      <Button
-                    style={{
-                      height: 20,
-                      width: 20,
-                    }}
-                    title="Close"
-                    color="white"
-                    onPress={() => {
-                      setModalVisible(!modalVisible);
-                    }}
-                  />
-      </Modal> */}
       <Text style={styles.mainTitle}>{category}, When I Grow Up</Text>
-      {/* <TopicDetailsHeader
-      jobImg ={props.jobsImg}
-      /> */}
+      <Image source ={require('../assets/'+category+'Job.png')} style = {{height: 150, width: 250, resizeMode : 'stretch', marginHorizontal: 30}}/>
       <JobsList category={category} />
       <Button title="close" onPress={props.exit}></Button>
     </View>
