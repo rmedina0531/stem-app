@@ -1,5 +1,12 @@
 import React, { useState } from "react";
-import { StyleSheet, View, Text, Modal, TouchableOpacity, Image } from "react-native";
+import {
+  StyleSheet,
+  View,
+  Text,
+  Modal,
+  TouchableOpacity,
+  Image,
+} from "react-native";
 import Button from "./Button";
 
 import Quiz from "../components/Quiz";
@@ -80,30 +87,28 @@ const TopicPage = (props) => {
         <JobsDetails topic={props.title} exit={closeJobsDetails} />
       </Modal>
 
-<<<<<<< HEAD
-      <Text style={[styles.title, { color: props.textColor }]}>
-        {props.title}
-      </Text>
-=======
       <View style={styles.topicHeaderContainer}>
         <View style={styles.backContainer}>
-          <TouchableOpacity 
-              activeOpacity={0.5} 
-              onPress={() => {
-                navigation.goBack()
-            }}>
-              <Image
-                source={require('../assets/goBackBtn.png')}
-                style={styles.goBackBtn}
-              />
-              </TouchableOpacity>
+          <TouchableOpacity
+            activeOpacity={0.5}
+            onPress={() => {
+              navigation.goBack();
+            }}
+          >
+            <Image
+              source={require("../assets/goBackBtn.png")}
+              style={styles.goBackBtn}
+            />
+          </TouchableOpacity>
         </View>
         <View style={styles.titleContainer}>
-          <Text style={[styles.title, { color: 'white' }]}> {props.title} </Text>
+          <Text style={[styles.title, { color: "white" }]}>
+            {" "}
+            {props.title}{" "}
+          </Text>
         </View>
       </View>
-      
->>>>>>> styling
+
       <View
         style={{
           display: "flex",
@@ -165,7 +170,7 @@ const styles = StyleSheet.create({
   },
   title: {
     fontSize: 40,
-    fontWeight: 'bold',
+    fontWeight: "bold",
     textAlign: "center",
   },
   buttonStyle: {
@@ -181,6 +186,5 @@ const styles = StyleSheet.create({
   topicHeaderContainer: {
     marginBottom: 100,
     marginTop: 40,
-
   },
 });
