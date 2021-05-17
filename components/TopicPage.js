@@ -40,6 +40,21 @@ const TopicPage = (props) => {
     return topicDetailsHeaderImg;
   };
 
+  const jobPicture = (title) => {
+    let jobImg ="";
+
+    if (title == "Science") {
+      jobImg = require("../assets/scienceJob.png");
+    } else if (title == "Technology") {
+      jobImg = require("../assets/technologyJob.png");
+    } else if (title == "Engineering") {
+      jobImg = require("../assets/engineeringJob.png");
+    } else if (title == "Math") {
+      jobImg = require("../assets/mathJob.png");
+    }
+    return jobImg;
+  };
+
   async function storiesHandler() {
     let key = "?apiKey=7ff285bdf33b42a083f63887f5b59503";
     let url = "https://newsapi.org/v2/everything" + key;
@@ -84,7 +99,11 @@ const TopicPage = (props) => {
 
       {/* Grow up modal */}
       <Modal visible={jobsDetailsOpen} animationType="slide">
-        <JobsDetails topic={props.title} exit={closeJobsDetails} />
+        <JobsDetails 
+        topic={props.title} exit={closeJobsDetails} 
+        // jobsImg = {jobPicture(props.title)}
+        
+        />
       </Modal>
 
       <View style={styles.topicHeaderContainer}>

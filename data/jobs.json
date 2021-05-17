@@ -3,6 +3,18 @@
         {
             "jobName": "Anthropologist",
             "link": "https://money.usnews.com/careers/best-jobs/rankings/best-science-jobs"
+        },
+        {
+            "jobName": "Epidemologist",
+            "link": "https://money.usnews.com/careers/best-jobs/rankings/best-science-jobs"
+        },
+        {
+            "jobName": "Archaeologist",
+            "link": "https://money.usnews.com/careers/best-jobs/rankings/best-science-jobs"
+        },
+        {
+            "jobName": "Biochemist",
+            "link": "https://money.usnews.com/careers/best-jobs/rankings/best-science-jobs"
         }
     ],
 
@@ -10,12 +22,36 @@
         {
             "jobName": "Software Developer",
             "link": "https://money.usnews.com/careers/best-jobs/rankings/best-technology-jobs"
+        },
+        {
+            "jobName": "Data Scientist",
+            "link": "https://money.usnews.com/careers/best-jobs/rankings/best-technology-jobs"
+        },
+        {
+            "jobName": "IT Manager",
+            "link": "https://money.usnews.com/careers/best-jobs/rankings/best-technology-jobs"
+        },
+        {
+            "jobName": "Computer Systems Analyst",
+            "link": "https://money.usnews.com/careers/best-jobs/rankings/best-technology-jobs"
         }
     ],
 
     "Engineering": [
         {
             "jobName": "Aerospace Engineer",
+            "link": "https://educatingengineers.com/career-specialties"
+        },
+        {
+            "jobName": "Agricultural Engineer",
+            "link": "https://educatingengineers.com/career-specialties"
+        },
+        {
+            "jobName": "Automotive Engineer",
+            "link": "https://educatingengineers.com/career-specialties"
+        },
+        {
+            "jobName": "Biomedical Engineer",
             "link": "https://educatingengineers.com/career-specialties"
         }
 
@@ -25,7 +61,18 @@
         {
             "jobName": "Auditor",
             "link": "https://www.northeastern.edu/graduate/blog/best-math-careers/"
+        },
+        {
+            "jobName": "Data Analyst",
+            "link": "https://www.northeastern.edu/graduate/blog/best-math-careers/"
+        },
+        {
+            "jobName": "Medical Scientist",
+            "link": "https://www.northeastern.edu/graduate/blog/best-math-careers/"
+        },
+        {
+            "jobName": "Financial Analyst",
+            "link": "https://www.northeastern.edu/graduate/blog/best-math-careers/"
         }
-
     ]
 }
