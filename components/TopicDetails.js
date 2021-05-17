@@ -122,39 +122,6 @@ const DetailEntry = (props) => {
                   />
                 </TouchableOpacity>
               </View>
-              <View
-                style={{
-                  justifyContent: "center",
-                  alignItems: "center",
-                  height: 100,
-                  width: "100%",
-                }}
-              >
-                <TouchableOpacity
-                  style={{
-                    backgroundColor: props.maincolor,
-                    width: "40%",
-                    borderRadius: 40,
-                    justifyContent: "center",
-                    alignItems: "center",
-                  }}
-                  onPress={() => {
-                    setModalVisible(!modalVisible);
-                  }}
-                >
-                  <Button
-                    style={{
-                      height: 20,
-                      width: 20,
-                    }}
-                    title="Close"
-                    color="white"
-                    onPress={() => {
-                      setModalVisible(!modalVisible);
-                    }}
-                  />
-                </TouchableOpacity>
-              </View>
             </View>
           </View>
         </SafeAreaView>
