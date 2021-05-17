@@ -11,6 +11,7 @@ import Button from "./Button";
 import Question from "./Question";
 
 import { connect } from "react-redux";
+
 const Quiz = (props) => {
   const datajson = require("../data/quiz.json");
   const questions = datajson[props.title];
@@ -18,25 +19,55 @@ const Quiz = (props) => {
   const [score, setScore] = useState(0);
   const [questionOpen, setQuestionOpen] = useState(false);
 
+  let mainColor = null;
+
+  if (props.title == "Science") {
+    mainColor = "#98c484"
+  }
+  else if (props.title == "Technology") {
+    mainColor = "#3698B4"
+  }
+  else if (props.title == "Engineering") {
+    mainColor = "#E54C4C"
+  }
+  else {
+    mainColor = "#E99A46"
+  }
+
   return (
-    <View>
+    <View style={[styles.container, { backgroundColor: mainColor}]}>
       {/* display questions */}
       <Modal visible={questionOpen} animationType="slide">
         <Question
           json={questions}
           title={props.title}
           scoreHandler={setScore}
+          mainColor={mainColor}
           closeHandler={setQuestionOpen}
         />
       </Modal>
       <Text style={styles.title}>{props.title} Quiz</Text>
-      <Text>High Score: {props.quizData[props.title].maxScore}</Text>
+      <Text style={styles.title}>High Score: {props.quizData[props.title].maxScore}</Text>
+
+      <View style={styles.bottomButtons}>
+
       <Button
-        text="Start Quiz"
-        onPress={() => setQuestionOpen(true)}
-        color="#AAAAAA"
-      />
-      <Button text="Exit" onPress={props.exitHandler} color="#AAAAAA" />
+          style={styles.bottomButtonStyle}
+          textColor={mainColor}
+          text="Exit"
+          onPress={props.exitHandler}
+          color="#AAAAAA"
+        />
+
+        <Button
+          style={styles.bottomButtonStyle}
+          textColor={mainColor}
+          text="Start Quiz"
+          onPress={() => setQuestionOpen(true)}
+          color="#AAAAAA"
+        />
+
+      </View>
     </View>
   );
 };
@@ -58,8 +89,8 @@ function mapStateToProps(state) {
 }
 
 const styles = StyleSheet.create({
-  buttonContainer: {
-    justifyContent: "center",
+  container: {
+    flex: 1,
   },
   title: {
     fontSize: 40,
@@ -69,6 +100,7 @@ const styles = StyleSheet.create({
     textShadowColor: "rgba(0, 0, 0, 0.75)",
     textShadowOffset: { width: -1, height: 1 },
     textShadowRadius: 10,
+    color: '#FFFFFF'
   },
   buttonStyle: {
     backgroundColor: "#555555",
@@ -78,5 +110,25 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     alignItems: "center",
     borderRadius: 20,
+  },
+  bottomButtons: {
+
+    flex: 1,
+    justifyContent: "center",
+    alignItems: "flex-end",
+    display: "flex",
+    flexDirection: "row",
+
+  },
+
+  bottomButtonStyle: {
+    height: 50,
+    width: 140,
+    margin: 10,
+    justifyContent: "center",
+    alignItems: "center",
+    borderRadius: 20,
+    backgroundColor: "white",
+
   },
 });

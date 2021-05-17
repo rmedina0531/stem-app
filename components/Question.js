@@ -67,16 +67,33 @@ const Question = (props) => {
 
   if (resultFlag) {
     return (
-      <View>
-        <Text>Results</Text>
-        <Text>Score: {score}</Text>
-        <Button text="return" onPress={props.closeHandler} color="#AAAAAA" />
+      <View style={styles.container}>
+        <View style={{backgroundColor: props.mainColor}}>
+        <Text style={styles.title}>Results</Text>
+        <Text style={styles.title}>Score: {score}</Text>
+        </View>
+
+        <View style={styles.bottomButtons}>
+
+          <Button 
+          style={styles.bottomButtonStyle}
+          text="return" 
+          onPress={props.closeHandler}
+          />
+
+        </View>
+
+
       </View>
     );
   } else {
     return (
-      <View>
+      <View style={styles.container}>
+
+        <View style={{backgroundColor: props.mainColor}}>
         <Text style={styles.title}>{question}</Text>
+        </View>
+
         <View
           style={{
             display: "flex",
@@ -94,15 +111,14 @@ const Question = (props) => {
             <Button
               text={a}
               style={
-                selected === "a" ? styles.activeButtonStyle : styles.buttonStyle
+                selected === "a" ? [styles.activeButtonStyle, { backgroundColor: props.mainColor }] : [styles.buttonStyle, { backgroundColor: props.mainColor }]
               }
-              textColor={props.textColor}
               onPress={selectedA}
             />
             <Button
               text={b}
               style={
-                selected === "b" ? styles.activeButtonStyle : styles.buttonStyle
+                selected === "b" ? [styles.activeButtonStyle, { backgroundColor: props.mainColor }] : [styles.buttonStyle, { backgroundColor: props.mainColor }]
               }
               textColor={props.textColor}
               onPress={selectedB}
@@ -118,7 +134,7 @@ const Question = (props) => {
             <Button
               text={c}
               style={
-                selected === "c" ? styles.activeButtonStyle : styles.buttonStyle
+                selected === "c" ? [styles.activeButtonStyle, { backgroundColor: props.mainColor }] : [styles.buttonStyle, { backgroundColor: props.mainColor }]
               }
               textColor={props.textColor}
               onPress={selectedC}
@@ -126,19 +142,30 @@ const Question = (props) => {
             <Button
               text={d}
               style={
-                selected === "d" ? styles.activeButtonStyle : styles.buttonStyle
+                selected === "d" ? [styles.activeButtonStyle, { backgroundColor: props.mainColor }] : [styles.buttonStyle, { backgroundColor: props.mainColor }]
               }
               textColor={props.textColor}
               onPress={selectedD}
             />
           </View>
         </View>
-        <Button text="Next" onPress={nextHandler} color="#AAAAAA"></Button>
+
+        <View style={styles.bottomButtons}>
+
         <Button
-          text="Close Quiz"
-          onPress={props.closeHandler}
-          color="#DDDDDD"
-        ></Button>
+            style={styles.bottomButtonStyle}
+            text="Close Quiz"
+            onPress={props.closeHandler}
+          ></Button>
+
+          <Button
+            style={styles.bottomButtonStyle}
+            text="Next"
+            onPress={nextHandler}
+          ></Button>
+
+        </View>
+
       </View>
     );
   }
@@ -162,8 +189,8 @@ function mapStateToProps(state) {
 }
 
 const styles = StyleSheet.create({
-  buttonContainer: {
-    justifyContent: "center",
+  container: {
+    flex: 1,
   },
   title: {
     fontSize: 40,
@@ -173,6 +200,7 @@ const styles = StyleSheet.create({
     textShadowColor: "rgba(0, 0, 0, 0.75)",
     textShadowOffset: { width: -1, height: 1 },
     textShadowRadius: 10,
+    color: '#FFFFFF',
   },
   buttonStyle: {
     backgroundColor: "#555555",
@@ -193,5 +221,26 @@ const styles = StyleSheet.create({
     borderRadius: 20,
     borderWidth: 5,
     borderColor: "#00FF00",
+  },
+
+  bottomButtons: {
+
+    flex: 1,
+    justifyContent: "center",
+    alignItems: "flex-end",
+    display: "flex",
+    flexDirection: "row",
+
+  },
+
+  bottomButtonStyle: {
+    height: 50,
+    width: 140,
+    margin: 10,
+    justifyContent: "center",
+    alignItems: "center",
+    borderRadius: 20,
+    backgroundColor: "#AAAAAA",
+
   },
 });
